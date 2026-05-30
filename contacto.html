@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Closer</title>
+    <meta name="description" content="Contactá a Closer para solicitar presupuesto de marketing, IA, web, apps, Google Ads o automatizaciones." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><img src="assets/brand/logo-closer.png" alt="Closer" /></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a><a href="gestion-redes.html">Redes</a><a href="chatbots-ia.html">IA</a><a href="paginas-web.html">Web</a><a href="apps-sistemas.html">Apps</a><a href="campanias-creativas.html">Campañas</a><a href="google-ads.html">Ads</a><a href="automatizaciones-bi.html">BI</a><a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="contact-page">
+        <div class="contact-copy">
+          <p class="eyebrow">Contacto</p>
+          <h1>Contanos qué servicio querés conocer o contratar.</h1>
+          <p>Podés escribirnos por WhatsApp o completar el formulario demo para dejar planteado el objetivo de tu marca.</p>
+          <div class="contact-links">
+            <a href="https://wa.me/595972187822">WhatsApp comercial: +595 972 187822</a>
+            <a href="mailto:closer@closer.com.py">closer@closer.com.py</a>
+          </div>
+        </div>
+        <form class="contact-form" data-contact-form>
+          <label>Nombre <input type="text" name="name" placeholder="Tu nombre" required /></label>
+          <label>WhatsApp o email <input type="text" name="contact" placeholder="+595..." required /></label>
+          <label>Servicio de interés
+            <select name="goal" required>
+              <option value="">Seleccionar</option>
+              <option>Gestión de redes sociales</option>
+              <option>Chatbot con IA / CloserAI</option>
+              <option>Página web</option>
+              <option>App o sistema</option>
+              <option>Campaña creativa</option>
+              <option>Google Ads</option>
+              <option>Automatización o BI</option>
+            </select>
+          </label>
+          <label>Contexto <textarea name="message" rows="5" placeholder="Contanos brevemente qué necesitás"></textarea></label>
+          <button class="button primary" type="submit">Enviar consulta</button>
+          <p class="form-note" data-form-note>Demo visual lista. Para activar envíos reales hay que conectar el formulario.</p>
+        </form>
+      </section>
+    </main>
+    <footer class="site-footer"><img src="assets/brand/logo-closer.png" alt="Closer" /><p>Contacto Closer.</p><a href="index.html">Inicio</a></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

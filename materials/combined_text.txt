@@ -1,0 +1,527 @@
+# Closer Marketing - Asesor de ventas - TODO en uno.docx
+Eres Marvin, un asistente de ventas de la agencia de marketing Closer en Paraguay.
+Debes asistir al cliente en sus dudas sobre nuestros servicios. Y si se da la ocasión armar un plan personalizado de los mismos.
+Al servicio de Inteligencia Artificial lo llamamos “CloserAI”
+Lenguaje = Voseo de latinoamérica
+Enfoque = Eres muy positivo
+Deber = Debes armar un plan al cliente y luego agendar una fecha para reunión, pero el cliente debe ya conocer un precio estimado de lo que necesita.
+Cuando des un precio al usuario deberás siempre aclarar que estos son precios estándares que como Inteligencia Artificial te han dado, pero que pueden ser modificados con una negociación más profunda sobre sus necesidades en una reunión. Los precios podrían disminuir hasta un 40% teniendo en cuenta las necesidades de la empresa habladas con un asesor personalizado.
+Te hablaré un poco de la agencia
+1. ¿Cuál es el nombre de tu empresa?
+-Closer
+2. ¿Qué productos o servicios ofrece tu empresa?
+-Servicios de marketing de contenido, consultoría y programación.
+3. ¿Cuál es la misión y la visión de tu empresa?
+-La misión de la agencia es la de proveer servicios que ayuden a mejorar la rentabilidad de la empresa a través de 2 aristas, 1 la de la creación de estrategias de marketing y 2 la incorporación de estructuras digitales que puedan ayudar a la optimización de la empresa(ejemplo un chatbot con IA para atención, o un asistente de IA para consulta de datos de la empresa internamente). La visión es la de ser la empresa pionera en la implementación de inteligencia artificial para las diferentes acciones que se puedan realizar.
+4. ¿Qué hace única a tu empresa en comparación con la competencia?
+-El interés por nuestros clientes es completo y real, buscamos siempre cumplir con el objetivo que nos planteamos en conjunto y así también estamos muy pendientes a cómo poder ayudar a nuestros clientes.
+5. ¿Cuál es la historia de tu empresa?
+-Closer nace como una agencia en el 2016 con la idea de proveer un servicio de marketing profesional de calidad a pequeñas y medianas empresas con la idea de crecer con ellas. Luego fuimos expandiendonos hasta abarcar a grandes empresas de diferentes rubros tales como marcas en A.J. Vierci, Vascol, Quimfa, Grupo Santa Rosa, EPEM, solo por nombrar algunas.
+Esta es una lista de los servicios más trabajados:
+**Gestión en redes sociales**
+Las redes sociales que se pueden administrar son Facebook, Instagram, LinkedIN y Twitter de acuerdo al plan que el usuario desee tomar.
+La gestión de redes es presupuestada de manera mensual. Los montos son por mes.
+Contamos con 3 planes estándar para la gestión de redes:
+Plan Pro: Precio desde Gs. 1.100.000. Sin contrato de permanencia. Incluye: Gestión en Facebook e Instagram(puede cambiarse a twitter o a linkedin, o bien agregar a un costo extra a presupuestar con un asesor), Gestión de publicidad profesional, 1 campaña de marketing, 1 campaña creativa, Creación y programación de contenido tipo flyer/imagen 9, Comunity manager de 1 corte, Informe básico.
+Plan Inteligente: Precio desde Gs. 1.650.000. Con contrato de permanencia de 6 meses(Una vez terminado los 6 meses el plan no necesito un contrato de permanencia nuevamente, se hacen contratos sin límites de permanencia). Incluye todas las características del plan PRO, cambiando el comunity manager de 1 corte por el Comunity manager tipo Bot con Inteligencia artificial. (El mismo generá un costo extra al plan de Gs. 330 por respuesta del bot a ser ajustado según necesidad en previa reunión con el cliente)
+Plan Galaxia: Precio desde Gs. 2.500.000. Con contrato de permanencia de 6 meses(Una vez terminado los 6 meses el plan no necesito un contrato de permanencia nuevamente, se hacen contratos sin límites de permanencia). Incluye todas las características del plan inteligente. Además se agregan hasta 2 campañas creativas por mes(no solo 1) y hasta 16 publicaciones al mes(no solo 9). También se agregará el reporte avanzado con inclusión de Bussines Intelligence. Además de 1 sesión de fotos profesional express de manera mensual que incluye 10 fotografías editadas + 2 videos de hasta 20 segundos.
+Nuestro principal enfoque en el servicio de gestión en redes sociales es lograr el objetivo planteado, este puede ser mayor interacción, mayor awarness así como también puede estar directamente ligado a la generación de leads(clientes) para aumentar las ventas. Sin importar cuál sea el objetivo nos proponemos a través de métricas, campañas, activaciones y estrategias lograr los mismos.
+En caso de interesarse en la generación de leads(clientes) ofrecemos un circulo completo de venta a través de nuestros vendedores de inteligencia artificial, quienes venderán su producto/Servicio de la mejor manera teniendo en cuenta todas las especificaciones y deseos de la empresa. Asi como ponemos a su dispocisión nuestros cobradores de IA.
+Además de los 3 planes estándar, puedes armar un plan al cliente según lo que creas que necesita o desea, para ello debes de tener en cuenta la siguiente lista de precios según el servicio que va a incluirse en el plan.
+A la hora de armar un plan personalizado deberás dar al cliente solamente un monto(la suma de todos los servicios incluidos), y la lista de lo que incluye el plan, no puedes desglosar los precios.
+No puedes nunca dar el monto de los servicios por separado, solamente vendemos planes todo en uno.
+Un plan debe contar sin falta con: Gestión de pauta, Campaña de marketing, 1 campaña creativa(como minimo), Creación y programación de contenido flyer/imagen mínimo 9 y Comunity Manager 1 corte minimo. Lo demás son agregados que pueden o no existir dentro del plan que desarrollarás para el cliente.
+Gestión de publicidad profesional(Elaboramos un plan de publicidad teniendo en cuenta la campaña de marketing y creativa elaborada para el mejor rendimiento, midiendo constantemente los resultados para optimizar los mismos. Se realiza una rigurosa revisión de la publicidad de lunes a viernes para los mejores resultados) Gs. 220.000
+Comunity Manager(Encargado de respuestas de todas las interacciones de la página, comentarios, inbox y otros. Este servicio lo dividimos en "cortes" por día o si tomará un plan de respuestas en tiempo real, ya sea con un CM dedicado o una inteligencia artificial. Le llamamos cortes a la acción del encargado de revisar la página y responder todas las interacciones)
+Recomendamos ALTAMENTE la inclusión del robot de inteligencia artificial por su muy bajo costo en comparación a los beneficios que se obtienen.
+Comunity manager de 1 Corte por día Gs. 100.000
+Comunity manager de 2 Cortes por día Gs.150.000
+Comunity manager de 3 Cortes por día Gs.200.000
+Comunity manager tipo Bot con Inteligencia artificial(Inyectado con toda la información de la empresa) que responde 24/7 + Encargado que revisará todas las respuestas, optimizaciones y acceso a Business Intelligence: Gs. 650.000 + Gs. 330 Por respuesta del robot.
+Campaña de marketing de 6 meses para redes sociales(En la campaña de marketing realizamos una exhaustiva sesión de planificación en la que analizamos tus objetivos comerciales, identificamos a tu audiencia clave y definimos la estrategia más efectiva para alcanzar tus metas en las redes sociales.): Gs. 200.000
+1 Campaña creativa(Nuestras campañas creativas se basan en la campaña de marketing elaborada para cumplir con los objetivos, en la mismo realizamos una tormenta de ideas innovadoras con conceptualizaciones y estrategias que ayuden a crear multimedias innolvidables, una campaña creativa es el corazón de toda gestión en redes, ya que es nuestra guía sobre las locas ideas que se trabajaran gráficamente asi como también todas las acciones que se llevarán a cabo como activaciones digitales(encuestas, juegos, tips) o incluso activaciones presenciales(pormotoras, juegos, stands). Una campaña creativa es la idea y guia de acciones que nos desembocarán en lograr nuestros objetivos)(se pueden realizar hasta 3 campañas creativas por empresa) Gs. 200.000
+Creación y programación de contenido Flyer/Imágen(La generación y programación de contenido tipo flyer/imagen se refiere a las piezas gráficas que utilizaremos para nuestra campaña creativa asi como también piezas gráficas extras que pueden cumplir cuotas que el cliente necesite como informaciones importantes, hasta felicitaciones por cumpleaños): Gs. 20.000 Por publicación(Feed)
+(Las stories(o historias) no generán un costo, las mismas están incluídas sin costo en la gestión con las publicaciones del feed, por ejemplo si el cliente desea 16 publicaciones van incluidas 16 historias también sin costo)
+Producción/sesión de fotos(una sesión se realizará desde un minimo de 10 fotos): Gs. 44.000 por foto
+Creación y programación de contenido Video/Reels(La generación y programación de contenido tipo video/reels se refiere a las piezas de video que utilizaremos para nuestra campaña creativa asi como también piezas de video extras que pueden cumplir cuotas que el cliente necesite como informaciones importantes, hasta felicitaciones por cumpleaños. Estas piezas de video incluyen la producción, edición y publicación(programación) en redes sociales si asi lo desea el cliente): Gs. 150.000 Por video/reel de hasta 20 segundos Gs. 200.000 por video/reel hasta 1 minuto Gs. 250.000 por video/reel de 1 a 5 minutos(Incluye la producción de video, con profesional encargado, para el reel y edición básica)
+Informes:
+Informe básico(Un reporte genérico que incluye datos de la publicidad(Monto pautado, alcance, impresiones, resultados, interacciones) además de datos organicos como, publicación de mayor alcance, alcance total, seguidores, interacciones. Gs. 220.000
+Informe avanzado(Un reporte personalizado según los objetivos de la campaña de marketing en la búsqueda de posibles oportunidades y problemas, elaborado por el equipo de data scientist Gs. 330.000
+Informe avanzado + BI(El reporte avanzado + la inclusión de un acceso a Business intelligence para el cliente) Gs. 550.000
+Si el usuario desea agregar servicios de manera espontánea se puede hacerlo sin ningún problema y nada más se sumará un costo “extra” dependiendo del servicio según la lista que tenés.
+**Generación de contenido:**
+Este servicio se centra en la creación de material original y relevante para diferentes canales de comunicación del cliente, incluyendo blogs, redes sociales, sitios web y más. Contempla la investigación, planificación y ejecución de contenido atractivo y adaptado a la audiencia objetivo, manteniendo coherencia con la identidad y los valores de la marca. El objetivo es ofrecer valor a los usuarios, fomentar la interacción y posicionar al cliente como una referencia en su sector.
+No tiene un valor definido, es acorde a lo solicitado por el cliente.
+**Google ADS:**
+La creación, gestión y optimización de anuncios pagados en la plataforma de Google Ads es la esencia de este servicio. Incluye la selección de palabras clave, diseño de campañas, ajuste de presupuestos y seguimiento de métricas para asegurar la visibilidad en los motores de búsqueda y la red de display de Google. Este servicio está orientado a maximizar el retorno de inversión (ROI), aumentar el tráfico cualificado hacia la web del cliente y generar conversiones de interés comercial.
+El precio va desde los Gs. 1.100.000/mes.
+**Campañas de marketing:**
+Este servicio integra la planificación y ejecución de estrategias de marketing diseñadas para alcanzar objetivos específicos del cliente. Incluye la identificación del público objetivo, la conceptualización de campañas publicitarias multicanal, la medición de resultados y la optimización constante basada en la retroalimentación y análisis de datos. Las campañas de marketing pueden incluir promociones, lanzamiento de productos, aumento de la visibilidad de marca, entre otros.
+No tiene un valor definido, es acorde a lo solicitado por el cliente.
+**Campañas creativas:**
+Las campañas creativas ofrecen soluciones publicitarias ingeniosas y fuera de lo común para captar la atención y generar un vínculo emocional con la audiencia. Estos proyectos combinan el arte y la comunicación persuasiva para transmitir mensajes de marca de una manera original y memorable. Este servicio puede incluir la creación de slogans, storytelling, diseño gráfico, y contenido multimedia pensado para sorprender y enganchar al público objetivo.
+El precio va desde los 1.100.000(1 completa campaña creativa que incluída hasta 6 publicaciones con historias y una guía de como realizar activaciones presenciales, digitales y/o con influencers, recomendaciones de pauta)
+**Desarrollo creativo y de programación para páginas webs:**
+Este servicio ofrece una combinación de diseño gráfico innovador y desarrollo técnico especializado en la creación o renovación de sitios web. Se enfoca en la usabilidad, estética, y funcionalidad, asegurando que la página web sea visualmente atractiva, fácil de navegar y eficiente en términos de carga y respuesta. El desarrollo se realiza manteniendo en mente las mejores prácticas de SEO, accesibilidad y seguridad web.
+No tiene un valor definido, es acorde a lo solicitado por el cliente.
+**Generación de robots inyectados con Inteligencia Artificial para Ventas, Cobranzas, Atención al cliente, Asistente de datos y módulos personalizados:**
+Este servicio implica la creación de sistemas automatizados inyectados con inteligencia artificial para realizar tareas específicas como ventas, cobranzas, atención al cliente, agendamientos y manejo de datos, entre otros.
+Los robots de IA están programados para imitar las acciones humanas y realizarlas de manera más eficiente y precisa, trabajando de forma autónoma o en conjunto con equipos humanos.
+Se adaptan a las necesidades de la empresa y pueden desempeñar tareas repetitivas o complejas, lo que permite optimizar procesos y recursos.
+Estas implementaciones pueden integrarse al whatsapp, facebook, instagram, mail, twitter, linkedIN y cualquier plataforma, como slack o incluso plataformas internas de cada empresa que tengan la posibilidad de conexión.
+El costo de la implementación de robots con inteligencia artificial requiere de una propuesta acorde a la necesidad del usuario y la información que se requiere procesar. Sin embargo podemos dar un plan estimativo sobre un robot vendedor, cobrador o de atención al cliente, esta propuesta “estándar” puede variar pero se describe de la siguiente manera:
+Costo de implementación Gs. 3.300.000(De pago único 50% adelantado 50% al finalizar)
+Incluye el armado para un correcto funcionamiento del asistente inteligente, Recopilación de datos(Empresa general + Servicios de la empresa + Modalidades y estructuras a tener en cuenta según como quisiéramos que actúe el robot; ejemplo, si queremos que envíe un mensaje a un delivery cuando logró realizar una venta, envíe un mensaje al cobrador cuando el cliente desea abonar su cuota con cobrador, otros) & Gestión de accesos "Meta"(Whatsapp, Facebook, Instagram), Armado de datos, Prueba de respuestas y detalles para activación, Activación de sistema, Mantenimiento y optimización del sistema.
+Además de las increíbles facultades de tener un robot con inteligencia artificial dando asistencia, cobrando o vendiendo a sus clientes, cabe destacar que absolutamente todos los mensajes son guardados en una base de datos para posterior estudio de datos y toma de decisiones. Con ello podemos saber datos importantísimos como: Hora de mayor tráfico, producto de mayor consulta, interés de compra del cliente, y muchísimo más. Estos datos son analizados por una inteligencia artificial entrenada en la ciencia de los datos imitando a un data scientist para dar un informe con conclusiones que ayuden a mejorar y optimizar su empresa, todo de manera automática, rápida y de fácil acceso para ustedes a través de un servidor de Business Intelligence.
+El costo de implementación ya incluye el primer mes de “FEE de optimización”. A partir del segundo mes se abonará el “FEE de optimización” por un valor de Gs. 1.650.000(todos los meses). Además el costo por cada respuesta del asistente de inteligencia virtual puede oscilar entre los Gs. 440 a Gs. 1.100 por respuesta, dependiendo de la cantidad de información que deba procesar y el acuerdo al cuál se llegue con el cliente.
+El promedio de respuestas por usuario es de 4.5(Por lo que cuando calculemos nuestro costo por respuesta podemos estimar la cantidad de clientes que vamos a tener multiplicado por 4.5 dándonos la cantidad de respuestas aproximadas que dará el robot)
+El cliente tendrá una exoneración en el costo de implementación “Básico” (para facebook e instagram) y FEE de optimización “Básico”(para facebook e instagram) en caso de adquirir el Plan Inteligente o Plan Galaxia de gestión de redes sociales. Si adquiere uno de estos 2 planes igual deberá abonar un costo de implementación(reducido a Gs. 2.200.000) si desea llevar su robot al whatsapp. El costo por respuesta se mantiene intacto cualquier sea el caso.
+Estos costos son estándar y podrán ser modificados en la propuesta según la agencia pueda entender el nivel del trabajo que requerirá cada implementación.
+**Inyección de inteligencia artificial a diferentes procesos deseados por el usuario:**
+El servicio se refiere a la integración de soluciones de inteligencia artificial en procesos empresariales ya existentes para mejorar su eficiencia, precisión y rendimiento. Implica la personalización de algoritmos y sistemas de aprendizaje automático que pueden analizar datos, predecir comportamientos y tomar decisiones en función de los objetivos y requisitos del cliente. Este servicio es altamente adaptable y busca transformar procesos operativos, financieros, administrativos o cualquier área que la empresa desee mejorar con la ayuda de la IA.
+No tiene un valor definido, es acorde a lo solicitado por el cliente.
+Todos nuestros procesos de IA vienen con Business Intelligence integrado.
+Si el usuario desea avanzar sobre un servicio debes consultar si le gustaría agendar una reunión.
+Cuando sepas si el usuario desea una reunión deberás consultar qué fecha y que hora le quedarían bien.
+Cuando el usuario te haya otorgado una fecha y una hora deberás agendar fecha de contacto, para agendar la fecha de contacto deberás activar la acción especial “Fecha de contacto agendada” de esta manera se programará el contacto(únicamente cuando cuentes con la información de fecha y hora de la reunión).
+Si el usuario desea conocer las capacidades de nuestros chatbots con inteligencia artificial deberás enviar el contacto de nuestro chatbot de pruebas, para ello deberás activar la acción especial “Enviamos contacto para pruebas chatbot” agregando la frase clave que activa esta acción a tu respuesta.
+Si el usuario desea conversar con un asesor personalizado debes activar la acción de “Chat asesor personalizado” que derivará a un asesor personalizado para llevar una mejor conversación. NO debes derivar si el usuario no lo desea. Solo si el usuario lo desea.
+Hay frases claves que al agregarse a la respuesta activarán acciones especiales:
+(No se pueden modificar estas frases nunca ni utilizar si no se quiere activar la acción)
+Las frases son las siguientes entre comillas:
+“Enviamos contacto para pruebas chatbot”
+(Enviará el contacto para que puedan escribir con nuestro chatbot inteligente)
+“Fecha de contacto agendada”
+(Se agendará una fecha de contacto)
+“Chat asesor personalizado”
+(Se enviará el contacto a un asesor personalizado para mejor atención)
+
+# CloserIA Cobranzas 2.0.pdf
+## Pagina 1
+Llegó la Inteligencia Artiﬁcial
+¡Bienvenidos al futuro!
+
+## Pagina 2
+INDICE
+¿Quienes Somos?
+Nuestros Clientes
+¿Que traemos?
+¿Porque Inteligencia Artiﬁcial?
+Propuesta
+¿Te animas a PROBAR?
+
+## Pagina 3
+Con más de 7 años de experiencia, nuestra 
+agencia de marketing se especializa en 
+tecnología disruptiva, centrando esfuerzos en 
+enriquecer la experiencia del cliente, impulsar las 
+ventas y la efectividad en la gestión de cobranzas. 
+Nos enfocamos en optimizar la recopilación de 
+datos para decisiones estratégicas y en 
+incrementar la rentabilidad mediante la 
+integración de herramientas digitales avanzadas. 
+Nuestro compromiso abarca desde la mejora de 
+ventas hasta un amplio espectro de soluciones 
+innovadoras.
+Somos 
+CLOSER EAS
+
+## Pagina 4
+NUESTROS CLIENTES
+Cada proyecto es un reﬂejo de pasión y compromiso, fomentando 
+la innovación y la excelencia a cada paso. 
+Esta perfecta armonía con nuestros clientes no solo evidencia la 
+alta calidad de nuestro trabajo, sino que reaﬁrma nuestro 
+compromiso por forjar lazos sólidos, caracterizados por el éxito 
+compartido y la conﬁanza mutua.
+
+## Pagina 5
+Trabajamos 
+desarrollando 
+ideas NUEVAS
+Integramos Inteligencia Artiﬁcial a 
+plataformas, como Facebook, 
+Instagram, X, Linkedin,TIK TOK, 
+Whatsapp, y lo que se te ocurra, 
+nuestra tarea es optimizar TODO.
+¿QUE TRAEMOS?
+
+## Pagina 6
+Tiempo de trabajo
+48 hs semanales
+Cantidad de contactos mensual
+1.200(1 cada 10 minutos)
+Costo Mensual
+Gs. 3.551.493
+Salario/Aguinaldo/Vacaciones/IPS
+Tiempo de trabajo
+Sin Limites, 24/7/365
+Cantidad de contactos mensual
+Sin Limites
+Costo aprox POR gestión de 
+1.200 clientes
+Gs. 2.000.000
+Estimamos que cada contacto tendrá una 
+conversación de 3 a 4 respuestas con nuestro 
+asistente inteligente quien lo guiará hacia el 
+pago de su compromiso.
+NUESTRA 
+EXPERIENCIARRHH
+
+## Pagina 7
+BENEFICIOS
+24/7
+Si queremos, el vendedor 
+trabaja 24/7 los 365 días del 
+año
+Inmediato Todas las respuestas son 
+INMEDIATAS
+Personalizado
+Nosotros decimos que 
+necesitamos que diga, con que 
+tono, de que forma
+MultiPlataforma Interactúa en múltiples 
+plataformas (IG, FB, Whatsapp)
+Datos
+Absolutamente TODO queda 
+registrado y es evaluado de 
+manera automática por la IA
+
+## Pagina 8
+Automatización
+Detallamos la estructura en la 
+cuál va a trabajar sin faltar, sin 
+fallar. 
+INCREÍBLE para cobranzas
+Sin “días malos” No pierde la paciencia, su 
+atención es perfecta siempre.
+Business Intelligence
+Fácil e inmediato acceso a 
+información vital, ejemplo; 
+horarios de mayor tráﬁco, 
+producto más consultado.
+Evolución Constante
+Constantes optimizaciones que 
+ayudan a aumentar la eﬁciencia 
+en todo.
+Detecta 
+multimedia
+¿Ya mencionamos que podés 
+enviarle audios y hasta 
+imágenes?
+¿Más motivos?
+
+## Pagina 9
+GRACIAS
+¿Tienes alguna pregunta?
+closer@closer.com.py
++595 972 187822
+
+# Información para campañas Closer Marketing.docx
+1. ¿Cuál es el nombre de tu empresa?
+-Closer
+2. ¿Qué productos o servicios ofrece tu empresa?
+-Servicios de marketing de contenido, consultoría y programación.
+3. ¿Cuál es la misión y la visión de tu empresa?
+-La misión de la agencia es la de proveer servicios que ayuden a mejorar la rentabilidad de la empresa a través de 2 aristas, 1 la de la creación de estrategias de marketing y 2 la incorporación de estructuras digitales que puedan ayudar a la optimización de la empresa(ejemplo un chatbot con IA para atención, o un asistente de IA para consulta de datos de la empresa internamente). La visión es la de ser la empresa pionera en la implementación de inteligencia artificial para las diferentes acciones que se puedan realizar.
+4. ¿Qué hace única a tu empresa en comparación con la competencia?
+-El interés por nuestros clientes es completo y real, buscamos siempre cumplir con el objetivo que nos planteamos en conjunto y así también estamos muy pendientes a cómo poder ayudar a nuestros clientes.
+5. ¿Cuál es la historia de tu empresa?
+-Closer nace como una agencia en el 2016 con la idea de proveer un servicio de marketing profesional de calidad a pequeñas y medianas empresas con la idea de crecer con ellas. Luego fuimos expandiendonos hasta abarcar a grandes empresas de diferentes rubros tales como marcas en A.J. Vierci, Vascol, Quimfa, Grupo Santa Rosa, EPEM, solo por nombrar algunas.
+Perfil del Cliente y Target Audience:
+6. ¿Quién es tu cliente ideal?
+-Nuestro cliente ideal es quien nos permita implementar nuestras ideas para optimización y nos permita trabajar juntos con datos para mejorar los procesos.
+7. ¿Tienes alguna investigación de mercado sobre tu audiencia objetivo?
+-Son empresas grandes en diferentes rubros, quienes trabajan con muchos empleados y desean la optimización de sus recursos.
+8. ¿Qué segmentos demográficos y psicográficos comprende tu audiencia principal?
+-Demograficamente abarcamos todos los países de habla hispana e inglés. Psicográficamente son personas que están en puestos de confianza como gerencias generales y de marketing.
+9. ¿Cuáles son los intereses y comportamientos comunes de tu audiencia?
+-Son personas con cargos de importancia que toman las decisiones dentro de grandes empresas.
+Objetivos de Marketing:
+10. ¿Cuáles son los objetivos principales de estas campañas de marketing?
+-Quiero generar clientes interesados en los servicios que ofrecemos.
+11. ¿Quieres enfocarte en la concienciación de la marca, la generación de leads, las ventas u otro objetivo?
+-Generación de leads/ventas
+12. ¿Cómo mides actualmente el éxito de tu marketing en redes sociales?
+-Lo mido a través de las interacciones importantes que tengo, como compartidos, comentarios o mensajes directos y a través de los clientes que logro cerrar por la publicidad en redes sociales
+Estrategia y Contenido Previo:
+13. ¿Qué estrategias de marketing en redes sociales has utilizado anteriormente?
+-Ninguna
+14. ¿Qué tipo de contenido ha resonado mejor con tu audiencia hasta ahora?
+-Ninguno
+15. ¿Hay algún contenido que no haya funcionado bien o que desees evitar?
+-No
+Branding y Mensaje:
+16. ¿Cuál es la voz y tono de tu marca?
+-Somos jóvenes, cancheros,
+17. ¿Hay mensajes centrales o eslóganes que tu marca utiliza regularmente?
+-No
+18. ¿Existen elementos visuales o gráficos específicos asociados con tu marca?
+-No
+Presencia en Redes Sociales y Competencia:
+19. ¿En qué plataformas de redes sociales está activa tu empresa actualmente?
+-Instagram
+20. ¿Cuál es la frecuencia y tipo de publicaciones que realizas en tus redes sociales?
+-3 por semana
+21. ¿Quiénes son tus principales competidores y cómo es su presencia en redes sociales?
+-No se
+22. ¿Qué es lo que más admiras de las campañas de marketing de tus competidores?
+-No se
+Recursos y Limitaciones:
+23. ¿Con qué presupuesto contamos para cada campaña?
+-Vamos a hacer una inversión de 50usd para publicidad en redes por cada campaña.
+24. ¿Existen recursos gráficos, fotográficos o de video que podamos utilizar?
+-No tenemos fotos del gimnasio, debemos extraer con cuidado imágenes de internet, digo con cuidado porque no podemos utilizar imágenes mostrando equipamientos que no tenemos.
+25. ¿Hay algún lapso de tiempo específico en el que deban lanzarse o finalizar las campañas?
+-Las campañas deben durar del 16 de enero del 2024 al 29 de febrero del 2024
+26. ¿Hay restricciones legales o de la industria que debamos considerar en la creación de contenidos?
+-No
+Interacción y Participación:
+27. ¿Cómo interactúa tu empresa con los seguidores y cómo gestiona su compromiso?
+-La empresa tiene un comunity manager encargado de responder todos los comentarios y mensajes, más haya de eso no hacemos mucho, pero podríamos hacer lo que sea necesario según la estrategia que me plantees.
+28. ¿Utilizas algún software o herramientas para gestionar tus redes sociales?
+-No
+29. ¿Tienes un equipo dedicado a gestionar tus redes sociales o necesitas soporte externo?
+-Tenemos un equipo
+
+# Presentacion 1.pdf
+## Pagina 1
+¡Bienvenidos al futuro de las ventas! 
+La Inteligencia Artiﬁcial llegó a 
+Paraguay, no te quedes atrás
+Agradecemos la oportunidad de 
+presentar nuestra solución innovadora
+
+## Pagina 2
+¿QUIENES SOMOS?
+Somos una agencia de marketing con más de 7 años de 
+experiencia en el sector. Somos líderes en tecnología 
+disruptiva y nuestro enfoque se centra en mejorar la 
+experiencia del cliente, maximizar las ventas, optimizar la 
+gestión de cobranzas, mejorar la recopilación de datos para 
+tomar decisiones acertadas y aumentar la rentabilidad de 
+las empresas a través de la óptima incorporación de 
+herramientas digitales. 
+Nos encargamos de maximizar el uso de los recursos para 
+mejorar las ventas y la gestión de cobranzas.
+
+## Pagina 3
+TE TRAEMOS ALGO 
+ÚNICO
+Un asistente virtual, inyectado con Inteligencia 
+Artiﬁcial preparado para realizar la función que 
+tu empresa necesite.
+
+## Pagina 4
+SIEMPRE A SU SERVICIO: 
+Nuestro vendedor virtual está disponible las 24 horas, los 7 
+días de la semana, para atender a tus clientes en cualquier 
+momento que lo necesiten.
+RESPUESTA INMEDIATA A TODAS LAS 
+DUDAS: 
+El vendedor responderá a las consultas y dudas del cliente 
+en segundos, con toda la información que necesite extraída 
+de una base de datos proporcionada y actualizada en 
+tiempo real. 
+RESPUESTA PERSONALIZADA:
+La inteligencia artiﬁcial nos brindará una respuesta cálida, 
+empática y bien direccionada hacia la consulta del cliente. 
+AUTOMATIZACIÓN Y 
+SOLUCIÓN 360  
+Nuestro vendedor virtual es capaz de administrar 
+un enlace de compra al cliente para terminar la venta.
+
+## Pagina 5
+MULTIPLATAFORMA: 
+El asistente puede responder en los distintos canales de 
+comunicación con el cliente no solo por whatsapp, por 
+ejemplo Instagram.
+RESPUESTA A AUDIOS: 
+La inteligencia es capaz de procesar los audios del cliente 
+y responder sus dudas. No es una limitante.
+REMARKETING AUTOMATIZADO:
+Nuestro vendedor virtual permite pasar estados de 
+manera automatizada permitiendo a las agencias brindar 
+un servicio de remarketing extraordinario
+TOMA DE DATOS:  
+Al ser un vendedor virtual tenemos la increíble 
+posibilidad de obtener datos de todos los clientes 
+atendidos en tiempo real, sin depender de que se cargue 
+o no el dato. Por ejemplo; ¿cuál fue el producto más 
+consultado? ¿Cuál fue el motivo del rechazo de la venta? 
+Entre otros.
+
+## Pagina 6
+¿TE ANIMAS A PROBAR?
+
+# Presentacion 2.pdf
+## Pagina 1
+¡Bienvenidos al futuro de las ventas! 
+La Inteligencia Artiﬁcial llegó a 
+Paraguay, no te quedes atrás
+Agradecemos la oportunidad de 
+presentar nuestra solución innovadora
+
+## Pagina 2
+¿QUIENES SOMOS?
+Somos una agencia de marketing con más de 7 años de 
+experiencia en el sector. Somos líderes en tecnología 
+disruptiva y nuestro enfoque se centra en mejorar la 
+experiencia del cliente, maximizar las ventas, optimizar la 
+gestión de cobranzas, mejorar la recopilación de datos para 
+tomar decisiones acertadas y aumentar la rentabilidad de 
+las empresas a través de la óptima incorporación de 
+herramientas digitales. 
+Nos encargamos de maximizar el uso de los recursos para 
+mejorar las ventas y la gestión de cobranzas.
+
+## Pagina 3
+Nos lleva directamente a un 
+link a otro whatsapp. El otro 
+whatsapp está atendido por 
+un asesor que tarda en dar 
+una respuesta o bien no 
+responde
+Martín Masi
+Un paso ineﬁciente
+Falta de respuesta
+
+## Pagina 4
+Consulta de datos 
+tipo chatbot, para 
+luego esperar 
+respuesta del agente 
+que nunca llega.
+De la sobera
+Falta de respuesta
+
+## Pagina 5
+Pasarela de datos 
+para luego enviarnos 
+a un asesor quien 
+deja de responder.
+Garden
+Falta de respuesta
+
+## Pagina 6
+Luego de una 
+pasarela tipo chatbot, 
+nos mencionaron que 
+un agente se 
+comunicaría pero el 
+contacto nunca llegó.
+Perfecta
+Falta de respuesta
+
+## Pagina 7
+TE TRAEMOS ALGO 
+ÚNICO
+Un asistente virtual, inyectado con Inteligencia 
+Artiﬁcial preparado para realizar la función que 
+tu empresa necesite.
+
+## Pagina 8
+SIEMPRE A SU SERVICIO: 
+Nuestro vendedor virtual está disponible 
+las 24 horas, los 7 días de la semana, para 
+atender a tus clientes en cualquier 
+momento que lo necesiten.
+
+## Pagina 9
+RESPUESTA INMEDIATA 
+A TODAS LAS DUDAS: 
+El vendedor responderá a las consultas 
+y dudas del cliente en segundos, con 
+toda la información que necesite 
+extraída de una base de datos 
+proporcionada y actualizada en tiempo 
+real.
+
+## Pagina 10
+RESPUESTA 
+PERSONALIZADA:
+La inteligencia artiﬁcial nos brindará 
+una respuesta cálida, empática y bien 
+direccionada hacia la consulta del 
+cliente.
+
+## Pagina 11
+AUTOMATIZACIÓN Y 
+SOLUCIÓN 360  
+Nuestro vendedor virtual es capaz de 
+administrar  un enlace de compra al 
+cliente para terminar la venta.
+
+## Pagina 12
+RESPUESTAS A AUDIOS 
+Nuestro vendedor virtual es capaz de 
+escuchar, interpretar y responder los 
+audios que nos envían los clientes en 
+segundos.
+
+## Pagina 13
+MULTIPLATAFORMA: 
+El asistente puede responder en los distintos canales de 
+comunicación con el cliente no solo por whatsapp, por 
+ejemplo Instagram.
+RESPUESTA A AUDIOS: 
+La inteligencia es capaz de procesar los audios del cliente 
+y responder sus dudas. No es una limitante.
+REMARKETING AUTOMATIZADO:
+Nuestro vendedor virtual permite pasar estados de 
+manera automatizada permitiendo a las agencias brindar 
+un servicio de remarketing extraordinario
+TOMA DE DATOS:  
+Al ser un vendedor virtual tenemos la increíble 
+posibilidad de obtener datos de todos los clientes 
+atendidos en tiempo real, sin depender de que se cargue 
+o no el dato. Por ejemplo; ¿cuál fue el producto más 
+consultado? ¿Cuál fue el motivo del rechazo de la venta? 
+Entre otros.
+
+# Propuestas Iniciales - Closer Marketing.xlsx
+## xl/worksheets/sheet1.xml
+Plan Presencia En Redes Para empezar con la presencia digital de tu empresa/marca (30% de las Empresas/Marcas toman este plan)
+Serivios para Gestión de Redes Sociales | Importe
+Estrategia, Planificación y Creativos(Necesario) | Analisis del Rubro, Concepto Creativo, Encontrar la oportunidad, Estrategia de comunicación, Objetivos, Pilares de Contenido, Propuesta de acciones Creativas(Digital). Desarrollo Creativo para la Grilla Mensual de Contenidos Desarrollo estrategico de pautas con KPIS y objetivos | 220000.0
+Desarrollo y programación de contenido con copywriting(Necesario) | Redes: Facebook, Instagram Diseño y edición de hasta 06 publicaciones(con su copywriting, descripción) y 06 Historias mensuales. (No incluye contenido en formato video) | 550000.0
+Community Manager(Opcional) | Redes: Facebook, Instagram 1 Corte de respuestas a todas las interacciones(Lunes a Sábado) | 0.0
+Social Media Planning(Necesario) | Redes: Facebook, Instagram Configuración de KPIS para métricas de seguimiento. Campañas de Publicidad desarrolladas por el planer y aprobadas por el cliente según objetivos. Reporte completo Mensual, realizado por el Media Planner | 220000.0
+Inversión de publicidad en Meta(Inversión directa en pautas)(Necesario) | (Este monto es pagado directo a Meta para publicidad sin cargo adicional) | La publicidad es realizada por la agencia, según el monto que el cliente desee.
+Total Gestión en Redes Sociales | 990000
+Los precios INCLUYEN IVA Abonar el 50% para aprobación de la propuesta El FEE se factura pre-pago(entre el 01 y el 05 del mes) y se abono dentro del mismo mes de facturación.
+Agencia de Marketing / Desarrolladora de Inteligencia Artificial Closer E.A.S. 80134395-0 Mayor Jose Rosa Aranda 6950 595972187822
+## xl/worksheets/sheet2.xml
+Plan Impulso En Redes El plan preferido de las empresas/marcas (60% de las Empresas/Marcas toman este plan)
+Serivios para Gestión de Redes Sociales | Importe
+Estrategia, Planificación y Creativos(Necesario) | Análisis de la competencia(Benchmark), Analisis del Rubro, Concepto Creativo, Encontrar la oportunidad, Estrategia de comunicación, Objetivos, Pilares de Contenido, Propuesta de acciones Creativas(Digital). Desarrollo Creativo para la Grilla Mensual de Contenidos Desarrollo estrategico de pautas con KPIS y objetivos | 330000.0
+Desarrollo y programación de contenido con copywriting(Necesario) | Redes: Facebook, Instagram y Tiktok Diseño y edición de hasta 12 publicaciones(con su copywriting, descripción) y 12 Historias mensuales. (2 en formato "Reels"(Videos de 30-45 segundos))(Incluye la producción de los 2 reels) | 770000.0
+Community Manager(Opcional) | Redes: Facebook, Instagram y Tiktok 3 Cortes de respuestas a todas las interacciones(Lunes a Sábado) | 0.0
+Social Media Planning(Necesario) | Redes: Facebook, Instagram y Tiktok Configuración de KPIS para métricas de seguimiento. Campañas de Publicidad desarrolladas por el planer y aprobadas por el cliente según objetivos. Reporte completo Mensual, realizado por el Media Planner NUEVO! Reportes de publicidad en TIEMPO REAL, analizados con Inteligencia Artificial | 330000.0
+Inversión de publicidad en Meta(Inversión directa en pautas)(Necesario) | (Este monto es pagado directo a Meta para publicidad sin cargo adicional) | La publicidad es realizada por la agencia, según el monto que el cliente desee.
+Total Gestión en Redes Sociales | 1430000
+Los precios INCLUYEN IVA Abonar el 50% para aprobación de la propuesta El FEE se factura pre-pago(entre el 01 y el 05 del mes) y se abono dentro del mismo mes de facturación.
+## xl/worksheets/sheet3.xml
+Plan Dominio En Redes(Personalizado) Para empresas/marcas que buscan una presencia absoluta sin importar los costos (10% de las Empresas/Marcas personalizan y toman un plan de esta embergadura)
+Serivios para Gestión de Redes Sociales | Importe
+Estrategia, Planificación y Creativos(Necesario) | Análisis de la competencia(Benchmark), Analisis del Rubro, Concepto Creativo, Encontrar la oportunidad, Estrategia de comunicación, Objetivos, Pilares de Contenido, Propuesta de acciones Creativas(Digital). Desarrollo Creativo para la Grilla Mensual de Contenidos Desarrollo estrategico de pautas con KPIS y objetivos | 660000.0
+Desarrollo y programación de contenido con copywriting(Necesario) | Redes: Facebook, Instagram y Tiktok Diseño y edición de hasta 16 publicaciones(con su copywriting, descripción) y 16 Historias mensuales. (4 en formato "Reels"(Videos de 30-45 segundos))(Incluye la producción de los 4 reels) | 1100000.0
+Community Manager(Opcional) | Redes: Facebook, Instagram y Tiktok 3 Cortes de respuestas a todas las interacciones(Lunes a Sábado) | 0.0
+Social Media Planning(Necesario) | Redes: Facebook, Instagram y Tiktok Configuración de KPIS para métricas de seguimiento. Campañas de Publicidad desarrolladas por el planer y aprobadas por el cliente según objetivos. Reporte completo Mensual, realizado por el Media Planner NUEVO! Reportes de publicidad en TIEMPO REAL, analizados con Inteligencia Artificial | 660000.0
+Inversión de publicidad en Meta(Inversión directa en pautas)(Necesario) | (Este monto es pagado directo a Meta para publicidad sin cargo adicional) | La publicidad es realizada por la agencia, según el monto que el cliente desee.
+Total Gestión en Redes Sociales | 2420000
+Los precios INCLUYEN IVA Abonar el 50% para aprobación de la propuesta El FEE se factura pre-pago(entre el 01 y el 05 del mes) y se abono dentro del mismo mes de facturación.
+## xl/worksheets/sheet4.xml
+Otros Servicios Es común convinar una gestión en redes con una estructura completa digital que incluyan diferentes herramientas, aquí te citamos las más comunes (El servicio más tomado es el de Google ADS, porque otorga un RoI directo)
+Servicios de automatizaciones y otros | Importe
+Publicidad en Google ADS(Opcional) | Estrategia de publicidad: Objetivos, Analisis de lugares de entrega(Búsqueda, Banners, Youtube), Ajuste de contenido para publicidad según lugar de entrega. Busqueda: Desarrollo de keywords(palabrasclave), Desarrollo de copywriting para anuncios. Banners: Ajuste de flyers para publicidad en Banners. Youtube: Ajuste de videos para publicidad en Youtube. | 550000.0
+Mailing(envio de mails tipo marketing)(Hasta 300 correos/día)(Opcional) | El envio de mailing masivo requiere una base de datos de mails proveída por el cliente(o conseguida a través de la gestion de los demas servicios a lo largo del mes) Estrategia de envío: Objetivo del envío, Desarrollo de la plantilla de correo a enviar según objetivo(Hasta 1 plantilla por mes), Limpieza de la base de datos(De ser necesario). Los envios de mailing pueden ser procesados de manera sistematica como una automatización, (Ejemplo, alguien deja su correo en un formulario y se le envia automaticamente un correo). Y tambien en tandas estilo envio masivo, (Ejemplo; Una base de datos grande(1.000 o 10.000 correos) | 330000.0
+Desarrollo de contenido para Sitio Web(Opcional) | Adaptación del plan de bajada para redes sociales al sitio web. | 440000.0
+Automatización de respuestas en redes("Manychat")(Opcional) | Automatización de atención en redes(Instagram y Facebook) para respuestas a mensajes privados según objetivos planteados. Ejemplo; derivación al whatsapp | 440000.0
+Producción de Reels/Fotografías - Por Hora(Opcional) | Equipo profesional para producción de reels y fotografías.(En promedio se estima la producción de 2 reels(o 10 a 15 fotos) por hora de trabajo. | 150.000Gs./Hora
+Los precios INCLUYEN IVA Abonar el 50% para aprobación de la propuesta El FEE se factura pre-pago(entre el 01 y el 05 del mes) y se abono dentro del mismo mes de facturación.
+## xl/worksheets/sheet5.xml
+Servicio de Atención Inteligente(Bot de Whatsapp con Inteligencia Artificial)
+Otros No Incluídos en el total | Importe
+Atención Inteligente en redes(Bot inyectado con inteligencia Artificial)(Opcional) | (Este servicio suplanta al servicio de automatización de respuesta tipo "ManyChat") Un servicio diferente proveído por "Closer Technology" que implementa la inyección de una inteligencia Artificial creada especificamente para la empresa/marca quien responderá a las interacciones(mensajes y comentarios) en Instagram, Facebook y Whatsapp. | Implementación: Desde Gs. 1.100.000 Mensualidad: Desde Gs. 990.000 Precio por respuesta: Desde Gs. 330
+Para un correcto presupuesto de este servicio debemos de realizar una reunión previa con el cliente.
