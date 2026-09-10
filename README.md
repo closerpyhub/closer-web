@@ -106,7 +106,7 @@ La implementación sigue [las recomendaciones de Google para sus funciones con I
 
 Preparar el paquete público ejecutando `python tools/build_site.py`. Primero valida el sitio y después copia las 23 páginas, CSS/JS, sitemap/robots, los recursos usados y la licencia de la fuente a una carpeta temporal nueva. Imprime su ruta como `PUBLIC_SITE_DIR`. También acepta `--output` con una carpeta nueva o vacía; no borra contenido existente. El paquete actual contiene 45 archivos y aproximadamente 510 KB. No subir la raíz del repositorio: incluye materiales y herramientas que no corresponden a la web pública.
 
-Los cambios locales todavía no afectan a los buscadores. Después de publicar, comprobar que el dominio canónico entrega las páginas, `robots.txt` y `sitemap.xml` con HTTP 200 y sin bloqueos del hosting o CDN. En Google Search Console, verificar la propiedad si fuera necesario, enviar el sitemap e inspeccionar las URLs principales. Revisar cobertura de indexación, consultas, impresiones y clics con el tiempo. El sitio no incorpora todavía medición de posiciones, acceso a Search Console ni nuevas herramientas de analítica.
+La versión renovada se publicó el 10/09/2026. Se comprobó que el dominio canónico entrega las 23 páginas, `robots.txt`, `sitemap.xml` y los recursos con HTTP 200. El sitemap publicado coincide con el paquete y el robots público permite Googlebot, Bingbot y OAI-SearchBot. En Google Search Console queda pendiente verificar la propiedad si fuera necesario, enviar el sitemap e inspeccionar las URLs principales; no se accedió a esa herramienta durante este despliegue. Revisar cobertura de indexación, consultas, impresiones y clics con el tiempo. El sitio no incorpora medición de posiciones ni nuevas herramientas de analítica.
 
 ## Alojamiento y despliegue
 
@@ -119,6 +119,12 @@ wrangler pages deploy <PUBLIC_SITE_DIR> --project-name closer-web --branch maste
 ```
 
 La autenticación de Wrangler usa la sesión de Cloudflare del equipo; no se guardan credenciales en el proyecto. Si vence, renovar la sesión con `wrangler login`.
+
+Despliegue de producción del rediseño, confirmado el 10/09/2026: `6998ba99-8397-426b-b911-0f2e9952ae5b`, código `81d6572e701268e022b331f30ba622475efd08c2`, URL permanente [6998ba99.closer-web.pages.dev](https://6998ba99.closer-web.pages.dev). Se exportaron y publicaron 45 archivos públicos (521.089 bytes). Cloudflare confirmó el entorno Production y la rama master; `closer.com.py`, `www.closer.com.py` y `closer-web.pages.dev` sirven la versión renovada.
+
+La verificación con Chromium sobre el dominio público pasó los siete servicios desde la portada, diez fichas de planes, el cotizador, la preparación e invalidación de contacto, el menú móvil y la página activa en rutas sin extensión. No se enviaron mensajes ni se abrió WhatsApp. No hubo errores JavaScript ni respuestas HTTP de error en recursos propios; el bloqueo deliberado del beacon de analítica en el entorno de prueba se excluyó de los fallos del sitio.
+
+El dominio personalizado conserva transformaciones de Cloudflare preexistentes: protección de enlaces de correo, el script de Web Analytics y un bloque administrado al inicio de robots.txt con restricciones para algunos rastreadores de entrenamiento. Las páginas coinciden con el paquete tras descontar esas inserciones; CSS, JavaScript y recursos coinciden byte a byte. Los enlaces de correo se restauran con el script de Cloudflare. No se modificaron DNS, configuración de rastreadores, analítica ni la conexión Git del hosting.
 
 Versión de producción anterior al rediseño: `ad2ee419-8683-4375-8fd6-e1bfb7e71f5b`, correspondiente a `a56989e`, disponible en `https://ad2ee419.closer-web.pages.dev`. Cloudflare conserva los despliegues previos para recuperar una versión si fuera necesario.
 
