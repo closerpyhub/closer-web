@@ -37,7 +37,7 @@ SERVICE_ROUTES = REQUIRED_ROUTES - {"index.html", "contacto.html", "index-opcion
 
 
 def canonical_for(path: Path) -> str:
-    return ORIGIN + ("/" if path.name == "index.html" else "/" + path.name)
+    return ORIGIN + ("/" if path.name == "index.html" else "/" + path.stem)
 
 
 def local_target(url: str) -> Path | None:
@@ -48,6 +48,9 @@ def local_target(url: str) -> Path | None:
     target = (ROOT / unquote(parsed.path).lstrip("/")).resolve()
     if target.is_dir():
         target = target / "index.html"
+    elif not target.suffix:
+        # Cloudflare Pages redirects public .html URLs to their clean route.
+        target = target.with_suffix(".html")
     return target if target.is_relative_to(ROOT) else None
 
 

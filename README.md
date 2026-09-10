@@ -94,7 +94,7 @@ El contenido comercial permanece en HTML y puede leerse sin ejecutar JavaScript.
 
 Las fichas de mailing, Manychat y BI desarrollan esas soluciones concretas. Las frases describen servicios respaldados por la web y los materiales del proyecto; no representan una investigación de volúmenes de búsqueda ni posiciones medidas. Las presentaciones y el documento del asesor respaldan la actividad en Paraguay y el inicio de Closer en 2016; no se inventó una dirección física o cobertura por ciudad.
 
-Cada página tiene título y descripción propios, canonical HTTPS, Open Graph y un grafo JSON-LD con la identidad de la organización, el sitio y la página. Las páginas de servicios y planes incluyen `Service`; las internas, `BreadcrumbList`. El catálogo de la portada enlaza las siete áreas. El marcado describe el contenido y no garantiza resultados enriquecidos.
+Cada página tiene título y descripción propios, canonical HTTPS, Open Graph y un grafo JSON-LD con la identidad de la organización, el sitio y la página. Cloudflare Pages redirige las rutas `.html` a direcciones sin extensión: los canonical, Open Graph, identificadores JSON-LD y sitemap usan esas direcciones públicas finales. Los enlaces internos conservan `.html` para funcionar también en la vista previa; la navegación reconoce ambos formatos. Las páginas de servicios y planes incluyen `Service`; las internas, `BreadcrumbList`. El catálogo de la portada enlaza las siete áreas. El marcado describe el contenido y no garantiza resultados enriquecidos.
 
 `sitemap.xml` contiene 19 URLs canónicas indexables. La variante `index-opcion-servicios-clara.html` y las tres fichas históricas de chatbots llevan `noindex, follow` y se excluyen del sitemap. Conservan sus URLs, su contenido y sus precios; no se redirigen a productos con otro alcance. Antes de promover esas fichas antiguas, confirmar su vigencia comercial y actualizar tanto el sitemap como la comprobación estática.
 
@@ -108,4 +108,18 @@ Preparar el paquete público ejecutando `python tools/build_site.py`. Primero va
 
 Los cambios locales todavía no afectan a los buscadores. Después de publicar, comprobar que el dominio canónico entrega las páginas, `robots.txt` y `sitemap.xml` con HTTP 200 y sin bloqueos del hosting o CDN. En Google Search Console, verificar la propiedad si fuera necesario, enviar el sitemap e inspeccionar las URLs principales. Revisar cobertura de indexación, consultas, impresiones y clics con el tiempo. El sitio no incorpora todavía medición de posiciones, acceso a Search Console ni nuevas herramientas de analítica.
 
-El rediseño se entrega en la vista previa local. No se ha publicado en producción.
+## Alojamiento y despliegue
+
+El sitio existente está en Cloudflare Pages, proyecto `closer-web`, rama de producción `master`. Sus dominios son `closer.com.py`, `www.closer.com.py` y `closer-web.pages.dev`. La publicación puede realizarse directamente con Wrangler usando el directorio público exportado, sin cambiar DNS ni la conexión Git existente:
+
+```powershell
+python tools/build_site.py
+# Usar la ruta PUBLIC_SITE_DIR que devuelve el comando anterior.
+wrangler pages deploy <PUBLIC_SITE_DIR> --project-name closer-web --branch master --commit-hash <COMMIT>
+```
+
+La autenticación de Wrangler usa la sesión de Cloudflare del equipo; no se guardan credenciales en el proyecto. Si vence, renovar la sesión con `wrangler login`.
+
+Versión de producción anterior al rediseño: `ad2ee419-8683-4375-8fd6-e1bfb7e71f5b`, correspondiente a `a56989e`, disponible en `https://ad2ee419.closer-web.pages.dev`. Cloudflare conserva los despliegues previos para recuperar una versión si fuera necesario.
+
+La cuenta GitHub disponible (`closerpyhub`) tiene lectura del repositorio `thomasyaluff-ui/closer-web`, pero no permiso de push. El código nuevo está guardado en la rama local `codex/closer-web-refresh`. El despliegue directo no sincroniza GitHub: antes de disparar una futura publicación automática desde Git, subir esta versión con una cuenta que tenga escritura para evitar reponer el sitio antiguo.

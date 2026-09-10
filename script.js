@@ -45,10 +45,12 @@ if (navToggle && siteNav) {
     if (window.getComputedStyle(navToggle).display === "none") setMenuOpen(false);
   });
 
-  const pageName = window.location.pathname.split("/").pop() || "index.html";
+  // The preview serves .html files; Cloudflare Pages uses extensionless URLs.
+  const pageKey = (pathname) => pathname.replace(/\/+$/, "").split("/").pop().replace(/\.html$/, "") || "index";
+  const pageName = pageKey(window.location.pathname);
   siteNav.querySelectorAll("a[href]").forEach((link) => {
     const destination = new URL(link.href, window.location.href);
-    const destinationPage = destination.pathname.split("/").pop() || "index.html";
+    const destinationPage = pageKey(destination.pathname);
     if (destination.origin === window.location.origin && destinationPage === pageName && !destination.hash) {
       link.setAttribute("aria-current", "page");
       link.closest("details")?.classList.add("has-current");
