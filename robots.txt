@@ -1,0 +1,9 @@
+# Public pages and assets are available to search crawlers, including OAI-SearchBot.
+User-agent: *
+Allow: /
+Disallow: /.git/
+Disallow: /materials/
+Disallow: /tools/
+Disallow: /README.md
+
+Sitemap: https://closer.com.py/sitemap.xml
