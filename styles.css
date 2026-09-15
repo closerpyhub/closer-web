@@ -60,7 +60,7 @@ p{text-wrap:pretty}p+p{margin-top:16px}
 .text-link.light{color:var(--link);text-decoration-color:var(--line)}.text-link.light:hover{color:var(--link)}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:32px}
 
-/* Original Closer turquoise on white; the material study supports the service message. */
+/* The original eye symbol connects the hero to Closer's three service principles. */
 .home-hero{background:var(--white);color:var(--ink);overflow:clip}
 .hero-inner{width:min(var(--content),calc(100% - var(--gutter)*2));margin:auto;display:grid;grid-template-columns:1.04fr 1fr;align-items:center;gap:24px;padding-top:60px;padding-bottom:42px;min-height:670px}
 .hero-copy{position:relative;z-index:1;padding-bottom:16px}
@@ -70,9 +70,12 @@ p{text-wrap:pretty}p+p{margin-top:16px}
 .home-hero h1 span{display:block;color:var(--teal)}
 .hero-description{max-width:460px;font-size:1rem;color:var(--text);margin-top:26px;line-height:1.8}
 .home-hero .hero-actions{align-items:flex-start;flex-direction:column;gap:12px;margin-top:30px}
-.hero-art{position:relative;min-width:0}
-.hero-art>img{width:114%;max-width:none;margin-left:-6%;mix-blend-mode:multiply}
-.art-caption{display:flex;gap:20px;justify-content:space-between;font-size:.68rem;color:var(--muted);margin:-9px 22px 0;position:relative}
+.hero-art{position:relative;min-width:0;margin:0}
+.hero-art>img{width:100%;height:auto;object-fit:contain}
+.art-caption{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0;padding:22px 0 8px;border-top:1px solid var(--line);color:var(--ink);font-size:.88rem;line-height:1.45}
+.art-caption>span{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0}
+.art-caption svg{width:24px;height:24px;flex:none;color:var(--link)}
+.art-caption strong{font-weight:650;text-wrap:balance}
 .hero-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(var(--content),calc(100% - var(--gutter)*2));margin:auto;min-height:72px;padding-block:18px;border-top:1px solid var(--line);font-size:.77rem;color:var(--text)}
 .hero-bottom a{display:inline-flex;gap:28px;align-items:center;min-height:36px;color:var(--link)}
 .hero-bottom a span{color:var(--link)}
@@ -283,7 +286,7 @@ html{scroll-padding-top:92px}.header-inner{min-height:76px}.brand img{width:132p
 .nav-dropdown-panel a{padding:10px;font-size:.85rem;min-height:44px}
 .hero-inner{grid-template-columns:1.05fr .9fr;gap:8px;min-height:570px;padding-top:48px}
 .home-hero h1{font-size:clamp(2.6rem,5.8vw,3.5rem)}.hero-description{font-size:.9rem}
-.hero-art>img{width:137%;margin-left:-14%}.art-caption{display:none}.hero-label{font-size:.77rem}
+.art-caption{grid-template-columns:1fr;gap:16px;padding-top:20px;font-size:.87rem}.art-caption>span{flex-direction:row;align-items:center;gap:14px}.hero-label{font-size:.77rem}
 .hero-actions .button{font-size:.8rem;padding-inline:18px;gap:12px}.hero-actions .text-link{font-size:.8rem}
 .client-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
 .section-intro,.two-column,.faq-section,.contact-page{grid-template-columns:1fr;gap:36px}
@@ -303,8 +306,8 @@ html{scroll-padding-top:92px}.header-inner{min-height:76px}.brand img{width:132p
 .section{padding-block:60px}.hero-inner{grid-template-columns:1fr;padding-top:40px;padding-bottom:0}
 .home-hero h1{font-size:clamp(2.7rem,10.5vw,3.7rem)}.hero-label{margin-bottom:25px}
 .hero-description{max-width:390px;margin-top:24px;font-size:.92rem}.hero-copy{padding-bottom:0}
-.home-hero .hero-actions{margin-top:24px}.hero-art{width:100%;max-width:410px;justify-self:center;margin-top:-10px}
-.hero-art>img{width:105%;margin-left:-2.5%}.hero-bottom{min-height:64px;padding-block:15px;font-size:.68rem}
+.home-hero .hero-actions{margin-top:24px}.hero-art{width:100%;max-width:410px;justify-self:center;margin-block:14px 28px}
+.art-caption{font-size:.94rem;padding-block:22px 0}.hero-bottom{min-height:64px;padding-block:15px;font-size:.68rem}
 .hero-bottom p{max-width:170px}.hero-bottom a{gap:12px;flex-shrink:0}
 .trust-section{padding-block:42px}.trust-heading{align-items:flex-start;flex-direction:column;gap:12px}.trust-heading p{font-size:.8rem}
 .client-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 26px;margin-top:32px}.client-grid img{height:45px;max-width:100px}
@@ -346,7 +349,7 @@ html{scroll-padding-top:92px}.header-inner{min-height:76px}.brand img{width:132p
 }
 /* Final responsive polish and the retained alternate landing. */
 .hero-inner { min-height: 650px; padding-top: 44px; padding-bottom: 28px; }
-.hero-art > img { height: 570px; object-fit: contain; }
+.hero-art > img { max-height: 490px; }
 @keyframes hero-enter { from { transform: translateY(22px); } to { transform: none; } }
 .contact-links a { flex-wrap: wrap; column-gap: 10px; }
 .contact-form label > .field-label { display: block; }
@@ -371,12 +374,12 @@ body:not(.home-page) > main > .home-hero .button.secondary { color: var(--link);
 body:not(.home-page) > main > .home-hero .button.secondary:hover { background: var(--teal-soft); }
 @media (max-width: 800px) {
   .hero-inner { min-height: 570px; }
-  .hero-art > img { height: auto; }
+  .hero-art > img { max-height: 360px; }
   .process-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .hero-inner { padding-top: 40px; padding-bottom: 0; }
-  .hero-art > img { height: 300px; }
+  .hero-art > img { max-height: none; }
   .cred-strip { grid-template-columns: 1fr; gap: 26px; }
   .hero-panel { padding: 20px; }
   .panel-header { flex-wrap: wrap; }
