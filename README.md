@@ -113,7 +113,7 @@ La implementación sigue [las recomendaciones de Google para sus funciones con I
 
 Preparar el paquete público ejecutando `python tools/build_site.py`. Primero valida el sitio y después copia las 24 páginas, CSS/JS, sitemap/robots, los recursos usados y la licencia de la fuente a una carpeta temporal nueva. Imprime su ruta como `PUBLIC_SITE_DIR`. También acepta `--output` con una carpeta nueva o vacía; no borra contenido existente. El paquete contiene 46 archivos; el comando informa el peso actualizado. No subir la raíz del repositorio: incluye materiales y herramientas que no corresponden a la web pública.
 
-La versión renovada se publicó el 10/09/2026. Se comprobó que el dominio canónico entrega las 23 páginas, `robots.txt`, `sitemap.xml` y los recursos con HTTP 200. El sitemap publicado coincide con el paquete y el robots público permite Googlebot, Bingbot y OAI-SearchBot. En Google Search Console queda pendiente verificar la propiedad si fuera necesario, enviar el sitemap e inspeccionar las URLs principales; no se accedió a esa herramienta durante este despliegue. Revisar cobertura de indexación, consultas, impresiones y clics con el tiempo. El sitio no incorpora medición de posiciones ni nuevas herramientas de analítica.
+La versión renovada se publicó el 10/09/2026. Se comprobó que el dominio canónico entrega las páginas, `robots.txt`, `sitemap.xml` y los recursos con HTTP 200. El sitemap publicado coincide con el paquete y el robots público permite Googlebot, Bingbot y OAI-SearchBot. La propiedad `https://closer.com.py/` quedó verificada en Google Search Console el 21/09/2026 mediante la etiqueta HTML permanente de la portada. Google procesó correctamente `sitemap.xml` y detectó sus 20 URLs; además, `/meta-ads` se añadió a la cola prioritaria de rastreo. Revisar cobertura de indexación, consultas, impresiones y clics con el tiempo. El sitio no incorpora medición de posiciones ni nuevas herramientas de analítica.
 
 ## Alojamiento y despliegue
 
@@ -126,6 +126,8 @@ wrangler pages deploy <PUBLIC_SITE_DIR> --project-name closer-web --branch maste
 ```
 
 La autenticación de Wrangler usa la sesión de Cloudflare del equipo; no se guardan credenciales en el proyecto. Si vence, renovar la sesión con `wrangler login`.
+
+Verificación de Search Console publicada el 21/09/2026: `0bed3f45-4265-4388-8871-cf3010f2cd04`, código `ca5cdc81f8d29a9abafeb3803a63533bc6c59e19`, URL permanente [0bed3f45.closer-web.pages.dev](https://0bed3f45.closer-web.pages.dev). El paquete contiene 46 archivos (576.917 bytes). La portada pública respondió HTTP 200 con la etiqueta de verificación y Google confirmó la propiedad. Search Console procesó correctamente el sitemap con 20 páginas descubiertas y confirmó la solicitud de indexación de `/meta-ads` en su cola prioritaria.
 
 Página de Meta Ads publicada el 21/09/2026: `17e0ae0f-298f-4d40-ba1a-a2bea0c16baa`, código `5e9629a4d06739eeb51cc429007eb700c1cbac2a`, URL permanente [17e0ae0f.closer-web.pages.dev](https://17e0ae0f.closer-web.pages.dev). El paquete contiene 46 archivos (576.822 bytes). Cloudflare confirmó el entorno Production y la rama master. En el dominio canónico se comprobaron la portada, `/meta-ads`, la redirección desde `/meta-ads.html` y el sitemap con HTTP 200. Chromium móvil confirmó la navegación real desde la portada, H1, contenido completo, ausencia de desbordamiento y cero errores de consola; las únicas solicitudes no estáticas fueron dos eventos de analítica de Cloudflare con respuesta 204.
 
