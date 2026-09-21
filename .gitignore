@@ -5,3 +5,5 @@ Thumbs.db
 .env
 __pycache__/
 .wrangler/
+Desechos/*
+!Desechos/.gitkeep

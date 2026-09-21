@@ -19,7 +19,7 @@ Como alternativa, en una terminal que permanezca abierta se puede ejecutar `pyth
 ## Estructura
 
 - `index.html`: portada, servicios, marcas, recorrido, acceso al cotizador y preguntas frecuentes.
-- Siete páginas de servicios y trece páginas `plan-*.html`: alcances, importes y consultas.
+- Ocho páginas de servicios y trece páginas `plan-*.html`: alcances, importes y consultas.
 - `gestion-redes.html#arma-tu-plan`: cotizador de redes.
 - `contacto.html`: preparación de una consulta y apertura voluntaria de WhatsApp.
 - `index-opcion-servicios-clara.html`: variante histórica conservada y adaptada al diseño compartido.
@@ -54,7 +54,7 @@ node --check script.js
 git diff --check
 ```
 
-La comprobación estática revisa las 23 rutas originales, títulos, descripciones, H1, IDs, archivos locales y destinos de anclas. También valida canonical, coherencia de Open Graph, JSON-LD, política de indexación, sitemap y permisos de rastreo. No realiza solicitudes externas.
+La comprobación estática revisa las 24 rutas, títulos, descripciones, H1, IDs, archivos locales y destinos de anclas. También valida canonical, coherencia de Open Graph, JSON-LD, política de indexación, sitemap y permisos de rastreo. No realiza solicitudes externas.
 
 Verificación del rediseño (10/09/2026): 23 páginas en 390, 768 y 1440 px; navegación con teclado y móvil; comportamiento sin JavaScript; contacto con entradas largas; cotizador y reinicio. Sin errores de JavaScript, recursos faltantes ni desbordamiento del documento. Las pruebas no enviaron mensajes.
 
@@ -79,7 +79,7 @@ La pieza activa de la portada está en `assets/brand/closer-eye-studio.png`; se 
 
 Se creó con la herramienta integrada `image_gen`, usando `logo-closer.png` como referencia de identidad y la C anterior como referencia de material e iluminación. Dirección del prompt: conservar aro circular turquesa, ojo blanco, pupila oscura a la derecha, brillo y dos patas; interpretación escultórica frontal con profundidad, suelo blanco/celeste, tres nodos conectados, bordes blancos y ningún texto, letra C o elemento de interfaz dentro de la imagen. Es una pieza conceptual de marca, no una fotografía de un trabajo para clientes.
 
-El favicon de las 23 páginas es `assets/brand/closer-eye-icon.png` (512 × 512, transparente). Se aisló el ojo con sus patitas mediante `image_gen` tomando únicamente el logo original como referencia; el prompt pidió mantener geometría y colores, sin letras adyacentes, perspectiva ni fondo. Se revisó a 16 y 32 px. Se cambió también la URL del recurso para evitar reutilizar el favicon anterior de la caché.
+El favicon de las 24 páginas es `assets/brand/closer-eye-icon.png` (512 × 512, transparente). Se aisló el ojo con sus patitas mediante `image_gen` tomando únicamente el logo original como referencia; el prompt pidió mantener geometría y colores, sin letras adyacentes, perspectiva ni fondo. Se revisó a 16 y 32 px. Se cambió también la URL del recurso para evitar reutilizar el favicon anterior de la caché.
 
 Las frases de la portada son texto HTML visible y accesible: «Ideas que conectan», «Eficiencia en los procesos» y «Números que respaldan acciones». Se muestran en tres columnas en escritorio y en filas en pantallas pequeñas, con texto oscuro e iconos turquesa. El contenedor ya no usa `aria-hidden` y las frases no se ocultan en móvil.
 
@@ -91,6 +91,7 @@ El contenido comercial permanece en HTML y puede leerse sin ejecutar JavaScript.
 | --- | --- |
 | `index.html` | Agencia de marketing digital e inteligencia artificial en Paraguay |
 | `gestion-redes.html` | Gestión de redes sociales, community manager, contenido y publicidad en redes |
+| `meta-ads.html` | Agencia y gestión de Meta Ads en Paraguay, publicidad en Facebook e Instagram |
 | `chatbots-ia.html` | Chatbots con IA para WhatsApp, atención, ventas, cobranzas y agendamientos |
 | `paginas-web.html` | Diseño y desarrollo web, landing pages, sitios institucionales y tiendas online |
 | `apps-sistemas.html` | Aplicaciones, software a medida, sistemas internos e integraciones |
@@ -98,11 +99,11 @@ El contenido comercial permanece en HTML y puede leerse sin ejecutar JavaScript.
 | `google-ads.html` | Agencia y gestión de Google Ads, anuncios y seguimiento de campañas |
 | `automatizaciones-bi.html` | Automatización de procesos, email marketing, Manychat y Business Intelligence |
 
-Las fichas de mailing, Manychat y BI desarrollan esas soluciones concretas. Las frases describen servicios respaldados por la web y los materiales del proyecto; no representan una investigación de volúmenes de búsqueda ni posiciones medidas. Las presentaciones y el documento del asesor respaldan la actividad en Paraguay y el inicio de Closer en 2016; no se inventó una dirección física o cobertura por ciudad.
+Las fichas de mailing, Manychat y BI desarrollan esas soluciones concretas. `meta-ads.html` se añadió el 21/09/2026 porque la pauta en Meta solo aparecía como una mención dentro de gestión de redes, mientras las páginas que Google mostraba para consultas de agencias tenían una URL especializada. La página explica el alcance respaldado por la oferta existente, distingue gestión e inversión, responde cómo elegir una agencia y enlaza el cotizador; no afirma que Closer sea «la mejor» ni inventa resultados. Las frases describen servicios respaldados por la web y los materiales del proyecto; no representan una investigación de volúmenes de búsqueda ni posiciones medidas. Las presentaciones y el documento del asesor respaldan la actividad en Paraguay y el inicio de Closer en 2016; no se inventó una dirección física o cobertura por ciudad.
 
 Cada página tiene título y descripción propios, canonical HTTPS, Open Graph y un grafo JSON-LD con la identidad de la organización, el sitio y la página. Cloudflare Pages redirige las rutas `.html` a direcciones sin extensión: los canonical, Open Graph, identificadores JSON-LD y sitemap usan esas direcciones públicas finales. Los enlaces internos conservan `.html` para funcionar también en la vista previa; la navegación reconoce ambos formatos. Las páginas de servicios y planes incluyen `Service`; las internas, `BreadcrumbList`. El catálogo de la portada enlaza las siete áreas. El marcado describe el contenido y no garantiza resultados enriquecidos.
 
-`sitemap.xml` contiene 19 URLs canónicas indexables. La variante `index-opcion-servicios-clara.html` y las tres fichas históricas de chatbots llevan `noindex, follow` y se excluyen del sitemap. Conservan sus URLs, su contenido y sus precios; no se redirigen a productos con otro alcance. Antes de promover esas fichas antiguas, confirmar su vigencia comercial y actualizar tanto el sitemap como la comprobación estática.
+`sitemap.xml` contiene 20 URLs canónicas indexables. La variante `index-opcion-servicios-clara.html` y las tres fichas históricas de chatbots llevan `noindex, follow` y se excluyen del sitemap. Conservan sus URLs, su contenido y sus precios; no se redirigen a productos con otro alcance. Antes de promover esas fichas antiguas, confirmar su vigencia comercial y actualizar tanto el sitemap como la comprobación estática.
 
 `robots.txt` permite el rastreo de páginas y recursos públicos a través de la regla general, que incluye Googlebot, Bingbot y OAI-SearchBot. Excluye las carpetas internas `.git`, `materials`, `tools` y el README. Estas reglas no son controles de acceso: la publicación debe incluir solo archivos públicos. No se añadieron reglas específicas de entrenamiento de modelos. Ninguna página con `noindex` se bloquea al rastreo, para que el buscador pueda leer esa directiva.
 
@@ -110,7 +111,7 @@ La implementación sigue [las recomendaciones de Google para sus funciones con I
 
 ### Verificación después de una publicación autorizada
 
-Preparar el paquete público ejecutando `python tools/build_site.py`. Primero valida el sitio y después copia las 23 páginas, CSS/JS, sitemap/robots, los recursos usados y la licencia de la fuente a una carpeta temporal nueva. Imprime su ruta como `PUBLIC_SITE_DIR`. También acepta `--output` con una carpeta nueva o vacía; no borra contenido existente. El paquete contiene 45 archivos; el comando informa el peso actualizado. No subir la raíz del repositorio: incluye materiales y herramientas que no corresponden a la web pública.
+Preparar el paquete público ejecutando `python tools/build_site.py`. Primero valida el sitio y después copia las 24 páginas, CSS/JS, sitemap/robots, los recursos usados y la licencia de la fuente a una carpeta temporal nueva. Imprime su ruta como `PUBLIC_SITE_DIR`. También acepta `--output` con una carpeta nueva o vacía; no borra contenido existente. El paquete contiene 46 archivos; el comando informa el peso actualizado. No subir la raíz del repositorio: incluye materiales y herramientas que no corresponden a la web pública.
 
 La versión renovada se publicó el 10/09/2026. Se comprobó que el dominio canónico entrega las 23 páginas, `robots.txt`, `sitemap.xml` y los recursos con HTTP 200. El sitemap publicado coincide con el paquete y el robots público permite Googlebot, Bingbot y OAI-SearchBot. En Google Search Console queda pendiente verificar la propiedad si fuera necesario, enviar el sitemap e inspeccionar las URLs principales; no se accedió a esa herramienta durante este despliegue. Revisar cobertura de indexación, consultas, impresiones y clics con el tiempo. El sitio no incorpora medición de posiciones ni nuevas herramientas de analítica.
 

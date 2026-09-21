@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://closer.com.py"
 REQUIRED_ROUTES = {
     "index.html", "index-opcion-servicios-clara.html", "contacto.html",
-    "gestion-redes.html", "chatbots-ia.html", "paginas-web.html",
+    "gestion-redes.html", "meta-ads.html", "chatbots-ia.html", "paginas-web.html",
     "apps-sistemas.html", "campanias-creativas.html", "google-ads.html",
     "automatizaciones-bi.html", "plan-redes-presencia.html",
     "plan-redes-impulso.html", "plan-redes-dominio.html", "plan-chatbot-ia.html",
