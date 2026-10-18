@@ -7,3 +7,6 @@ __pycache__/
 .wrangler/
 Desechos/*
 !Desechos/.gitkeep
+
+# Preserved previous repository; the site export uses only current assets.
+/Material conservado/
