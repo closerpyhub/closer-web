@@ -1,6 +1,6 @@
 # Closer · Web
 
-Sitio estático de Closer E.A.S. Se trabaja desde esta carpeta; conserva el historial del repositorio `thomasyaluff-ui/closer-web`. No requiere un framework, instalación de paquetes ni compilación.
+Sitio estático de Closer E.A.S. Se trabaja desde esta carpeta y su repositorio canónico es `closerpyhub/closer-web`. No requiere un framework, instalación de paquetes ni compilación.
 
 ## Ejecutar localmente
 
@@ -141,4 +141,4 @@ El dominio personalizado conserva transformaciones de Cloudflare preexistentes: 
 
 Versión de producción anterior al rediseño: `ad2ee419-8683-4375-8fd6-e1bfb7e71f5b`, correspondiente a `a56989e`, disponible en `https://ad2ee419.closer-web.pages.dev`. Cloudflare conserva los despliegues previos para recuperar una versión si fuera necesario.
 
-La cuenta GitHub disponible (`closerpyhub`) tiene lectura del repositorio `thomasyaluff-ui/closer-web`, pero no permiso de push. El código nuevo está guardado en la rama local `codex/closer-web-refresh`. El despliegue directo no sincroniza GitHub: antes de disparar una futura publicación automática desde Git, subir esta versión con una cuenta que tenga escritura para evitar reponer el sitio antiguo.
+El repositorio canónico es `closerpyhub/closer-web`; `master` contiene la misma versión validada que se publica en Cloudflare Pages. Los despliegues directos con Wrangler deben usar el SHA de ese commit para mantener trazabilidad entre GitHub y producción.
