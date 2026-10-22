@@ -1,0 +1,54 @@
+name: Publish WEB Closer to its Cloudflare Pages project
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: closer-web-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'closerpyhub/closer-web' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_ACCOUNT_ID: 60706308dfe00ad618d8baf5fd4fe001
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate site and destination guard
+        run: |
+          python -m unittest discover -s tools -p 'test_*.py'
+          node --check script.js
+          python tools/build_site.py --output "$RUNNER_TEMP/closer-public" --commit "$GITHUB_SHA"
+      - name: Install pinned deployment CLI without a credential
+        run: npm install --global wrangler@4.152.0 --ignore-scripts
+      - name: Confirm exact existing account, project, branch and domains
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_CLOSER_PAGES_TOKEN }}
+        run: python tools/check_hosting.py
+      - name: Publish only the filtered site export
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_CLOSER_PAGES_TOKEN }}
+        run: >-
+          wrangler pages deploy "$RUNNER_TEMP/closer-public"
+          --project-name closer-web --branch master
+          --commit-hash "$GITHUB_SHA" --commit-dirty=false
+      - name: Verify actual production commit and both public domains
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_CLOSER_PAGES_TOKEN }}
+        run: python tools/check_hosting.py --commit "$GITHUB_SHA" --public-dir "$RUNNER_TEMP/closer-public"

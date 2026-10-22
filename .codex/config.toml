@@ -7,3 +7,17 @@ http_headers = { X-MCP-Toolsets = "repos,issues,pull_requests" }
 enabled = true
 startup_timeout_sec = 30
 tool_timeout_sec = 120
+
+# Read-only Cloudflare OAuth: thomasyaluff@gmail.com, account
+# 60706308dfe00ad618d8baf5fd4fe001. DNS authorization covers the shared
+# closer.com.py zone, not individual records. This repository may consult
+# closer.com.py, www.closer.com.py and Pages project closer-web only.
+# OAuth is account-scoped; verify zone ID 7d9bbb644c8d5a6291566d28b757103c.
+# Never expand OAuth scopes automatically or use another account.
+[mcp_servers.cloudflare_closer_web]
+url = "https://mcp.cloudflare.com/mcp"
+scopes = ["user:read", "offline_access", "account:read", "zone.read", "dns.read", "pages.metadata_read"]
+enabled_tools = ["whoami", "search", "execute", "docs"]
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 120

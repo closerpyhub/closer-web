@@ -15,7 +15,10 @@ from check_site import ROOT, Page, main as check_site
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, help='New or empty output directory; defaults to a temporary directory.')
+    parser.add_argument('--commit', help='Mark each exported HTML page with its 40-character source SHA.')
     args = parser.parse_args()
+    if args.commit and not re.fullmatch(r'[0-9a-f]{40}', args.commit):
+        parser.error('--commit must be a lowercase 40-character Git SHA')
     if check_site():
         return 1
 
@@ -54,8 +57,15 @@ def main() -> int:
         destination = output / source.relative_to(ROOT)
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
+        if args.commit and source.suffix == '.html':
+            html = destination.read_text(encoding='utf-8-sig')
+            marker = f'<meta name="closer-release" content="{args.commit}">'
+            if html.count('</head>') != 1:
+                raise ValueError(f'Expected one HTML head: {source.name}')
+            destination.write_text(html.replace('</head>', marker + '\n</head>'), encoding='utf-8')
 
-    print(f'Exported {len(files)} public files ({sum(path.stat().st_size for path in files)} bytes).')
+    exported_size = sum((output / path.relative_to(ROOT)).stat().st_size for path in files)
+    print(f'Exported {len(files)} public files ({exported_size} bytes).')
     print(f'PUBLIC_SITE_DIR={output}')
     return 0
 

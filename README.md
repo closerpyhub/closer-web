@@ -117,15 +117,21 @@ La versión renovada se publicó el 10/09/2026. Se comprobó que el dominio can�
 
 ## Alojamiento y despliegue
 
-El sitio existente está en Cloudflare Pages, proyecto `closer-web`, rama de producción `master`. Sus dominios son `closer.com.py`, `www.closer.com.py` y `closer-web.pages.dev`. La publicación puede realizarse directamente con Wrangler usando el directorio público exportado, sin cambiar DNS ni la conexión Git existente:
+El sitio existente está en Cloudflare Pages, cuenta `thomasyaluff@gmail.com` (`60706308dfe00ad618d8baf5fd4fe001`), proyecto `closer-web` (`089d08e6-cefa-4d17-91f0-a15571346a43`), rama de producción `master`. Sus dominios son `closer.com.py`, `www.closer.com.py` y `closer-web.pages.dev`; no se trasladan a otra cuenta/proyecto.
+
+Desde el 22/10/2026, `.github/workflows/deploy-closer-pages.yml` publica cada push a `master` de `closerpyhub/closer-web`. La conexión Git nativa de Pages conservaba el antiguo dueño `thomasyaluff-ui`; quedó deshabilitada para mantener un único publicador, sin borrar el proyecto ni cambiar DNS. GitHub Actions usa únicamente el secreto de este repositorio `CLOUDFLARE_CLOSER_PAGES_TOKEN`, con Pages Edit en esa cuenta y vencimiento 22/10/2027. Cloudflare no limita este permiso a un solo proyecto: el workflow y `tools/check_hosting.py` fijan el destino exacto y fallan antes de publicar si difieren proyecto, rama, cuenta o dominios. El token no incluye DNS, correo ni facturación; renovar el secreto antes de su vencimiento. El MCP sigue siendo solo lectura.
+
+El workflow valida el sitio y las pruebas de destino, exporta solo los 46 archivos públicos y agrega la marca `closer-release` con el SHA real a cada HTML exportado. Tras publicar, comprueba el commit canónico de Pages y las 24 páginas de ambos dominios, además de comparar los recursos con el paquete. Se preservan las inserciones de analítica/protección de correo y el bloque administrado de robots de Cloudflare. Una web HTTP 200 sin la marca actual no se acepta como publicación correcta.
+
+Como recuperación manual autorizada, puede usarse Wrangler con el directorio público exportado. No subir la raíz ni habilitar de nuevo el publicador Git antiguo:
 
 ```powershell
-python tools/build_site.py
+python tools/build_site.py --commit <SHA_COMPLETO_DE_MASTER>
 # Usar la ruta PUBLIC_SITE_DIR que devuelve el comando anterior.
 wrangler pages deploy <PUBLIC_SITE_DIR> --project-name closer-web --branch master --commit-hash <COMMIT>
 ```
 
-La autenticación de Wrangler usa la sesión de Cloudflare del equipo; no se guardan credenciales en el proyecto. Si vence, renovar la sesión con `wrangler login`.
+La autenticación manual de Wrangler usa la sesión de Cloudflare del equipo; no se guardan credenciales en el proyecto. Si vence, renovar la sesión con `wrangler login`. Para verificar el destino/publicación con una credencial Pages autorizada en el entorno, usar `python tools/check_hosting.py --commit <SHA> --public-dir <PUBLIC_SITE_DIR>`; nunca introducir su valor en argumentos, Git o documentación.
 
 Verificación de Search Console publicada el 21/09/2026: `0bed3f45-4265-4388-8871-cf3010f2cd04`, código `ca5cdc81f8d29a9abafeb3803a63533bc6c59e19`, URL permanente [0bed3f45.closer-web.pages.dev](https://0bed3f45.closer-web.pages.dev). El paquete contiene 46 archivos (576.917 bytes). La portada pública respondió HTTP 200 con la etiqueta de verificación y Google confirmó la propiedad. Search Console procesó correctamente el sitemap con 20 páginas descubiertas y confirmó la solicitud de indexación de `/meta-ads` en su cola prioritaria.
 
@@ -142,3 +148,9 @@ El dominio personalizado conserva transformaciones de Cloudflare preexistentes: 
 Versión de producción anterior al rediseño: `ad2ee419-8683-4375-8fd6-e1bfb7e71f5b`, correspondiente a `a56989e`, disponible en `https://ad2ee419.closer-web.pages.dev`. Cloudflare conserva los despliegues previos para recuperar una versión si fuera necesario.
 
 El repositorio canónico es `closerpyhub/closer-web`; `master` contiene la misma versión validada que se publica en Cloudflare Pages. Los despliegues directos con Wrangler deben usar el SHA de ese commit para mantener trazabilidad entre GitHub y producción.
+
+### Cloudflare MCP de solo lectura — 22/10/2026
+
+`cloudflare_closer_web`, en `.codex/config.toml`, usa el servidor oficial `https://mcp.cloudflare.com/mcp` y OAuth de `thomasyaluff@gmail.com`, cuenta `60706308dfe00ad618d8baf5fd4fe001`. Solo concede identidad, cuenta, renovación, `zone.read`, `dns.read` y `pages.metadata_read`; no publica ni modifica DNS. Un cliente nuevo comprobó la identidad, la zona activa `closer.com.py` (`7d9bbb644c8d5a6291566d28b757103c`), sus dos CNAME y Pages `closer-web` (`089d08e6-cefa-4d17-91f0-a15571346a43`), rama `master`.
+
+OAuth tiene alcance de cuenta: configurar un nombre por proyecto no aísla registros DNS. En este repositorio consultar únicamente `closer.com.py`, `www.closer.com.py` y Pages `closer-web`, comprobando cuenta y zona antes de cada operación. Al renovar, solicitar explícitamente los scopes guardados y revisar la pantalla final; no ampliar permisos ni seleccionar plantillas generales. Las credenciales quedan en el almacén de Codex, nunca en Git ni `.env`. Esta conexión es independiente de Wrangler; no se cambió su autorización, la conexión Git ni el despliegue existente.
