@@ -36,3 +36,5 @@ Marcar el ticket done sólo cuando los tres estén resueltos o el humano reduzca
 ## Registro de ejecución
 
 23/10/2026 · Sin trabajos seleccionados, ficha de evidencia ni permisos de publicación para C1/C2/C3. No se creó ningún HTML de caso ni se asignaron los logos existentes a un servicio o resultado. Siguiente dato: ficha E06/E07 completa por cada caso que elija el responsable.
+
+23/10/2026 · Se revisaron los materiales existentes de forma dirigida: contienen propuestas y descripciones de servicios, no una ficha seleccionada con período, línea base, resultado verificable y permiso de publicación para un caso. Los logos del sitio siguen siendo identidad visual, no evidencia de que Closer pueda atribuir un servicio o éxito concreto. El bloqueo E06/E07 permanece para los tres casos.
