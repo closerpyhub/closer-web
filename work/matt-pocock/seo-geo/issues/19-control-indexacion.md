@@ -1,7 +1,7 @@
 # 19 · Verificar descubrimiento e indexación posteriores
 
-Status: ready-for-agent
-Blocked by: 18; acceso de lectura a buscadores para sus datos privados
+Status: needs-info
+Blocked by: acceso de lectura a Search Console y Bing para estado privado por URL; revisión D+7 pendiente
 
 ## Entrega
 
@@ -26,4 +26,6 @@ Un control correcto puede cerrar aunque un buscador tarde; la indexación no obs
 
 ## Registro de ejecución
 
-URLs/estados / causas / correcciones / siguiente revisión: pendiente.
+23/10/2026 · Control técnico de D0 completado para las ocho URLs nuevas: el sitemap público contiene las 28 URLs de la versión, `robots.txt` conserva la política fuente junto a la política administrada de Cloudflare y ambos dominios sirven el HTML marcado con el SHA `f1ea30c`. Las pruebas locales del mismo SHA validaron canonical, metadata, grafo JSON-LD y enlaces de las páginas. Esto prueba publicación y rastreabilidad técnica, no descubrimiento, rastreo ni indexación por buscadores.
+
+No hubo acceso de lectura a Search Console/Bing para obtener el estado, canonical elegido ni causas por URL; tampoco se solicitó indexación ni se cambió un envío externo. Próxima revisión D+7: 30/10/2026, con lectura autorizada de ambas propiedades si está disponible.

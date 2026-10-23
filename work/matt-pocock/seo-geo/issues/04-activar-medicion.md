@@ -1,7 +1,7 @@
 # 04 · Configurar y comprobar recepción real de medición
 
-Status: ready-for-human
-Blocked by: 03 + E03/E04 y autorización para preparar; 18 sólo para recepción pública y cierre
+Status: needs-info
+Blocked by: ID público de una propiedad existente, contrato de privacidad E03/E04 y autorización de configuración externa
 
 ## Entrega
 
@@ -30,4 +30,4 @@ Este ticket no bloquea 17/18. Si no se completa, publicar la implementación des
 
 ## Registro de ejecución
 
-Preparación local / autorización / configuración / recepción / limitaciones: pendiente.
+23/10/2026 · Se verificó sólo por nombres de archivo y variables de entorno (sin leer secretos) que el repositorio versionado y este entorno no contienen un ID GA4/GTM o una configuración de medición reutilizable. No se creó otra propiedad, no se añadió un tracker, no se activó captura automática ni se modificó Cloudflare Web Analytics. Faltan el ID público de una propiedad existente, los hechos E03/E04 del aviso de privacidad y la autorización para configurar/validar la recepción.

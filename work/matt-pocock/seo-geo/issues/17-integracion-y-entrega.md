@@ -1,7 +1,7 @@
 # 17 · Integrar, verificar y entregar para revisión
 
-Status: ready-for-human
-Blocked by: revisión humana de la tanda local; 03 y 16 permanecen con sus datos externos pendientes
+Status: done
+Blocked by: ninguno para la entrega de esta tanda; 03 y 16 permanecen con sus datos externos pendientes
 
 ## Entrega
 
@@ -30,4 +30,4 @@ La finalización de 17 no marca completo el programa de indexación/resultados n
 
 ## Registro de ejecución
 
-23/10/2026 · Tanda local: `nosotros`, `recursos` y seis guías (`precio-gestion-redes-paraguay`, `precio-chatbot-whatsapp-paraguay`, `meta-ads-vs-google-ads`, `landing-page-o-web-institucional`, `preparar-chatbot-whatsapp`, `medir-consultas-whatsapp`). `check_site` pasó con 32 páginas/28 URLs; 12 pruebas Python, `node --check`, `git diff --check` y export pasaron. El export observó 54 archivos y excluyó trabajo/documentación/materiales/herramientas. Vista previa funcional: portada → guía y Recursos a 320/390 px sin desbordamiento ni errores de consola; el formulario preparó una consulta con datos sintéticos sin abrir WhatsApp ni enviar nada. Pendiente separado: analítica GA4/privacidad, baseline/rendimiento de campo, casos verificables, reputación e indexación posterior. Requiere revisión y autorización explícita antes de commit/push/publicación.
+23/10/2026 · Tanda local: `nosotros`, `recursos` y seis guías (`precio-gestion-redes-paraguay`, `precio-chatbot-whatsapp-paraguay`, `meta-ads-vs-google-ads`, `landing-page-o-web-institucional`, `preparar-chatbot-whatsapp`, `medir-consultas-whatsapp`). `check_site` pasó con 32 páginas/28 URLs; 12 pruebas Python, `node --check`, `git diff --check` y export pasaron. El export observó 54 archivos y excluyó trabajo/documentación/materiales/herramientas. Vista previa funcional: portada → guía y Recursos a 320/390 px sin desbordamiento ni errores de consola; el formulario preparó una consulta con datos sintéticos sin abrir WhatsApp ni enviar nada. Pendiente separado: analítica GA4/privacidad, baseline/rendimiento de campo, casos verificables, reputación e indexación posterior. La publicación y su control público quedaron registrados en 18.

@@ -1,7 +1,7 @@
 # 20 · Evaluar resultados y decidir el siguiente trabajo
 
-Status: ready-for-agent
-Blocked by: 02, 18; ventanas transcurridas y datos disponibles
+Status: needs-info
+Blocked by: 02, 04; ventanas futuras y datos comparables aún no disponibles
 
 ## Entrega
 
@@ -28,8 +28,10 @@ Tres cortes comparables y una recomendación sustentada para continuar el crecim
 
 | Corte | Estado inicial | Evidencia | Próximo paso |
 | --- | --- | --- | --- |
-| D+28 | No iniciado; D0 pendiente | Pendiente | Obtener primer período |
-| D+56 | No iniciado; D0 pendiente | Pendiente | Obtener segundo período |
-| D+84 | No iniciado; D0 pendiente | Pendiente | Cerrar evaluación |
+| D+28 · 20/11/2026 | Pendiente | D0 técnico publicado el 23/10; faltan base de buscadores, GA4/consentimiento y ventana transcurrida | Obtener primer período comparable |
+| D+56 · 18/12/2026 | Pendiente | Pendiente | Obtener segundo período comparable |
+| D+84 · 15/01/2027 | Pendiente | Pendiente | Cerrar evaluación |
+
+D0 no contiene clics, impresiones, posiciones, conversiones ni atribución comercial: ninguna de esas fuentes estuvo disponible ni se infirió desde tráfico público. El calendario es un criterio de revisión, no una automatización creada ni una promesa de indexación.
 
 El documento no instala una automatización ni autoriza mantener un agente ejecutándose por 84 días. Al llegar a un hito futuro, conservar estado y entregar la siguiente acción; programar seguimiento sólo si el usuario lo pide.

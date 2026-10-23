@@ -1,7 +1,7 @@
 # 18 · Publicar la versión autorizada y comprobarla
 
-Status: ready-for-human
-Blocked by: 17; autorización específica de commit/push/publicación
+Status: done
+Blocked by: ninguno
 
 ## Entrega
 
@@ -28,4 +28,8 @@ Sin autorización, permanecer listo para humano. Un error de deploy no autoriza 
 
 ## Registro de ejecución
 
-Autorización / SHA / workflow / deployment / verificación / D0: pendiente.
+23/10/2026 · La instrucción explícita “Haz TODO el plan por favor” autorizó ejecutar la publicación preparada. Se comprobó raíz `C:/Users/thoma/Documents/ChatGPT/Web Closer`, remoto `https://github.com/closerpyhub/closer-web.git`, rama `master` y cambios propios; `AGENTS.md` permaneció sin versionar. Se creó y publicó `f1ea30ce2705cd0a8d58ba0e122d5c67bd352a1f` (`feat: add SEO and GEO content hub`).
+
+El workflow `Publish WEB Closer to its Cloudflare Pages project` terminó exitosamente en [run 39985742430](https://github.com/closerpyhub/closer-web/actions/runs/39985742430). Cloudflare de solo lectura confirmó la cuenta, zona `closer.com.py`, Pages `closer-web` (`089d08e6-cefa-4d17-91f0-a15571346a43`), rama `master`, despliegue productivo canónico `18772867-c3cf-4b17-9159-0d47b869ff4d`, SHA exacto y alias activos `closer.com.py` / `www.closer.com.py`.
+
+Para evitar que la conversión de saltos de línea de Windows altere la comparación, se regeneró el export desde el blob Git del SHA publicado. La verificación pública completa aprobó los 54 artefactos y las 32 páginas con la marca `closer-release` en ambos dominios. D0 técnico: 23/10/2026; la medición comercial continúa desactivada por falta de ID/provisión y hechos de privacidad autorizados.
