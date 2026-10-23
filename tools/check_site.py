@@ -28,12 +28,30 @@ REQUIRED_ROUTES = {
     "plan-google-ads-modulo.html", "plan-automatizacion-bi.html",
     "plan-automatizacion-mailing.html", "plan-automatizacion-manychat.html",
     "plan-campana-creativa-completa.html",
+    "nosotros.html", "recursos.html",
+    "precio-gestion-redes-paraguay.html", "precio-chatbot-whatsapp-paraguay.html",
+    "meta-ads-vs-google-ads.html", "landing-page-o-web-institucional.html",
+    "preparar-chatbot-whatsapp.html", "medir-consultas-whatsapp.html",
 }
 NOINDEX_ROUTES = {
     "index-opcion-servicios-clara.html", "plan-chatbots-atencion-inteligente.html",
     "plan-chatbots-optimizacion.html", "plan-chatbots-robot-avanzado.html",
 }
-SERVICE_ROUTES = REQUIRED_ROUTES - {"index.html", "contacto.html", "index-opcion-servicios-clara.html"}
+SERVICE_ROUTES = {
+    "gestion-redes.html", "meta-ads.html", "chatbots-ia.html", "paginas-web.html",
+    "apps-sistemas.html", "campanias-creativas.html", "google-ads.html", "automatizaciones-bi.html",
+    "plan-redes-presencia.html", "plan-redes-impulso.html", "plan-redes-dominio.html",
+    "plan-chatbot-ia.html", "plan-chatbots-atencion-inteligente.html",
+    "plan-chatbots-optimizacion.html", "plan-chatbots-robot-avanzado.html",
+    "plan-google-ads-inversion.html", "plan-google-ads-modulo.html",
+    "plan-automatizacion-bi.html", "plan-automatizacion-mailing.html",
+    "plan-automatizacion-manychat.html", "plan-campana-creativa-completa.html",
+}
+ARTICLE_ROUTES = {
+    "precio-gestion-redes-paraguay.html", "precio-chatbot-whatsapp-paraguay.html",
+    "meta-ads-vs-google-ads.html", "landing-page-o-web-institucional.html",
+    "preparar-chatbot-whatsapp.html", "medir-consultas-whatsapp.html",
+}
 
 
 def canonical_for(path: Path) -> str:
@@ -114,7 +132,7 @@ def check_metadata(path: Path, page: Page, errors: list[str]) -> None:
         "og:title": page.text["title"][0].strip() if page.text["title"] else "",
         "og:description": page.descriptions[0] if page.descriptions else "",
         "og:url": canonical,
-        "og:type": "website",
+        "og:type": "article" if path.name in ARTICLE_ROUTES else "website",
         "og:site_name": "Closer",
         "twitter:card": "summary_large_image",
     }
@@ -191,6 +209,8 @@ def check_structured_data(path: Path, page: Page, errors: list[str]) -> int:
         required_types.add("BreadcrumbList")
     if path.name in SERVICE_ROUTES:
         required_types.add("Service")
+    if path.name in ARTICLE_ROUTES:
+        required_types.add("Article")
     for kind in sorted(required_types):
         if len(types[kind]) != 1:
             errors.append(f"{path.name}: expected one JSON-LD {kind}, found {len(types[kind])}")
@@ -200,6 +220,31 @@ def check_structured_data(path: Path, page: Page, errors: list[str]) -> int:
     for node in types["WebPage"]:
         if node.get("url") != canonical_for(path):
             errors.append(f"{path.name}: JSON-LD WebPage URL differs from canonical")
+    if path.name in ARTICLE_ROUTES and len(types["Article"]) == 1 and len(types["WebPage"]) == 1:
+        canonical = canonical_for(path)
+        article = types["Article"][0]
+        webpage = types["WebPage"][0]
+
+        def identifier(value: object) -> str | None:
+            if isinstance(value, dict):
+                value = value.get("@id")
+            return value if isinstance(value, str) else None
+
+        if article.get("headline") != page.text["h1"][0].strip():
+            errors.append(f"{path.name}: Article headline must match the H1")
+        if article.get("description") != page.descriptions[0]:
+            errors.append(f"{path.name}: Article description must match the meta description")
+        if article.get("url") != canonical:
+            errors.append(f"{path.name}: Article URL differs from canonical")
+        if identifier(webpage.get("mainEntity")) != f"{canonical}#article":
+            errors.append(f"{path.name}: WebPage mainEntity must reference the Article")
+        if identifier(article.get("mainEntityOfPage")) != f"{canonical}#webpage":
+            errors.append(f"{path.name}: Article mainEntityOfPage must reference the WebPage")
+        for field in ("author", "publisher"):
+            if identifier(article.get(field)) != ORIGIN + "/#organization":
+                errors.append(f"{path.name}: Article {field} must reference the Organization")
+    if path.name in ARTICLE_ROUTES and types["Service"]:
+        errors.append(f"{path.name}: an editorial route must not define a Service")
     for node in objects(graph):
         for key in ("@id", "url", "item", "logo", "image", "contentUrl"):
             value = node.get(key)

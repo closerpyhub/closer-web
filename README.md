@@ -22,6 +22,9 @@ Como alternativa, en una terminal que permanezca abierta se puede ejecutar `pyth
 - Ocho páginas de servicios y trece páginas `plan-*.html`: alcances, importes y consultas.
 - `gestion-redes.html#arma-tu-plan`: cotizador de redes.
 - `contacto.html`: preparación de una consulta y apertura voluntaria de WhatsApp.
+- `nosotros.html`: identidad institucional, áreas de trabajo y formas de contacto verificadas.
+- `recursos.html`: índice de guías para evaluar alcance, captación, IA y medición.
+- Seis guías editoriales: presupuesto de redes y chatbots, elección de Ads, tipo de web, preparación de chatbot y medición de consultas.
 - `index-opcion-servicios-clara.html`: variante histórica conservada y adaptada al diseño compartido.
 - `styles.css`: identidad, componentes y comportamiento responsive de todo el sitio.
 - `script.js`: navegación, cotizador y preparación de contacto.
@@ -54,7 +57,7 @@ node --check script.js
 git diff --check
 ```
 
-La comprobación estática revisa las 24 rutas, títulos, descripciones, H1, IDs, archivos locales y destinos de anclas. También valida canonical, coherencia de Open Graph, JSON-LD, política de indexación, sitemap y permisos de rastreo. No realiza solicitudes externas.
+La comprobación estática revisa las 32 rutas locales, títulos, descripciones, H1, IDs, archivos locales y destinos de anclas. También valida canonical, coherencia de Open Graph, JSON-LD, política de indexación, sitemap y permisos de rastreo. Las guías deben llevar `Article` enlazado correctamente con su `WebPage`; los servicios siguen requiriendo `Service`. No realiza solicitudes externas.
 
 Verificación del rediseño (10/09/2026): 23 páginas en 390, 768 y 1440 px; navegación con teclado y móvil; comportamiento sin JavaScript; contacto con entradas largas; cotizador y reinicio. Sin errores de JavaScript, recursos faltantes ni desbordamiento del documento. Las pruebas no enviaron mensajes.
 
@@ -98,20 +101,29 @@ El contenido comercial permanece en HTML y puede leerse sin ejecutar JavaScript.
 | `campanias-creativas.html` | Campañas publicitarias, concepto creativo, copywriting y contenido |
 | `google-ads.html` | Agencia y gestión de Google Ads, anuncios y seguimiento de campañas |
 | `automatizaciones-bi.html` | Automatización de procesos, email marketing, Manychat y Business Intelligence |
+| `nosotros.html` | Identidad y áreas de trabajo de Closer |
+| `recursos.html` | Índice de guías para preparar decisiones |
+| Guías editoriales | Presupuesto, canal, tipo de web, preparación de IA y medición de consultas |
 
 Las fichas de mailing, Manychat y BI desarrollan esas soluciones concretas. `meta-ads.html` se añadió el 21/09/2026 porque la pauta en Meta solo aparecía como una mención dentro de gestión de redes, mientras las páginas que Google mostraba para consultas de agencias tenían una URL especializada. La página explica el alcance respaldado por la oferta existente, distingue gestión e inversión, responde cómo elegir una agencia y enlaza el cotizador; no afirma que Closer sea «la mejor» ni inventa resultados. Las frases describen servicios respaldados por la web y los materiales del proyecto; no representan una investigación de volúmenes de búsqueda ni posiciones medidas. Las presentaciones y el documento del asesor respaldan la actividad en Paraguay y el inicio de Closer en 2016; no se inventó una dirección física o cobertura por ciudad.
 
 Cada página tiene título y descripción propios, canonical HTTPS, Open Graph y un grafo JSON-LD con la identidad de la organización, el sitio y la página. Cloudflare Pages redirige las rutas `.html` a direcciones sin extensión: los canonical, Open Graph, identificadores JSON-LD y sitemap usan esas direcciones públicas finales. Los enlaces internos conservan `.html` para funcionar también en la vista previa; la navegación reconoce ambos formatos. Las páginas de servicios y planes incluyen `Service`; las internas, `BreadcrumbList`. El catálogo de la portada enlaza las siete áreas. El marcado describe el contenido y no garantiza resultados enriquecidos.
 
-`sitemap.xml` contiene 20 URLs canónicas indexables. La variante `index-opcion-servicios-clara.html` y las tres fichas históricas de chatbots llevan `noindex, follow` y se excluyen del sitemap. Conservan sus URLs, su contenido y sus precios; no se redirigen a productos con otro alcance. Antes de promover esas fichas antiguas, confirmar su vigencia comercial y actualizar tanto el sitemap como la comprobación estática.
+El sitemap local de la tanda SEO/GEO contiene 28 URLs canónicas indexables: las 20 originales más Sobre Closer, Recursos y seis guías. La variante `index-opcion-servicios-clara.html` y las tres fichas históricas de chatbots llevan `noindex, follow` y se excluyen del sitemap. Conservan sus URLs, su contenido y sus precios; no se redirigen a productos con otro alcance. Antes de promover esas fichas antiguas, confirmar su vigencia comercial y actualizar tanto el sitemap como la comprobación estática.
 
 `robots.txt` permite el rastreo de páginas y recursos públicos a través de la regla general, que incluye Googlebot, Bingbot y OAI-SearchBot. Excluye las carpetas internas `.git`, `materials`, `tools` y el README. Estas reglas no son controles de acceso: la publicación debe incluir solo archivos públicos. No se añadieron reglas específicas de entrenamiento de modelos. Ninguna página con `noindex` se bloquea al rastreo, para que el buscador pueda leer esa directiva.
 
 La implementación sigue [las recomendaciones de Google para sus funciones con IA](https://developers.google.com/search/docs/appearance/ai-features) y [la documentación de OAI-SearchBot](https://developers.openai.com/api/docs/bots): contenido claro, enlaces accesibles y rastreo permitido. No requiere archivos especiales para IA ni instrucciones ocultas. No garantiza indexación, citas en respuestas o primeras posiciones.
 
+### Tanda SEO/GEO local pendiente de publicación
+
+Las seis guías responden una decisión distinta y enlazan hacia el servicio o contacto correspondiente: gestión de redes, presupuesto de chatbot, Meta Ads frente a Google Ads, landing/web/tienda, preparación de chatbot y recorrido de clic a venta. Sus datos de precio describen únicamente condiciones publicadas por Closer; no son precios de mercado. Los artículos usan autor institucional y no atribuyen resultados a clientes.
+
+La medición comercial adicional permanece desactivada: falta la propiedad autorizada, su ID público y los hechos finales del aviso de privacidad. Cloudflare Web Analytics existente no se modifica. Tampoco hay casos de estudio nuevos: requieren selección, evidencia y permiso de cada cliente. La guía de ejecución y sus estados están en `work/matt-pocock/seo-geo/` y no se exportan al sitio público.
+
 ### Verificación después de una publicación autorizada
 
-Preparar el paquete público ejecutando `python tools/build_site.py`. Primero valida el sitio y después copia las 24 páginas, CSS/JS, sitemap/robots, los recursos usados y la licencia de la fuente a una carpeta temporal nueva. Imprime su ruta como `PUBLIC_SITE_DIR`. También acepta `--output` con una carpeta nueva o vacía; no borra contenido existente. El paquete contiene 46 archivos; el comando informa el peso actualizado. No subir la raíz del repositorio: incluye materiales y herramientas que no corresponden a la web pública.
+Preparar el paquete público ejecutando `python tools/build_site.py`. Primero valida el sitio y después copia las 32 páginas, CSS/JS, sitemap/robots, los recursos usados y la licencia de la fuente a una carpeta temporal nueva. Imprime su ruta como `PUBLIC_SITE_DIR`. También acepta `--output` con una carpeta nueva o vacía; no borra contenido existente. El total de archivos y peso se informan al ejecutar; no son un número fijo. No subir la raíz del repositorio: incluye materiales y herramientas que no corresponden a la web pública.
 
 La versión renovada se publicó el 10/09/2026. Se comprobó que el dominio canónico entrega las páginas, `robots.txt`, `sitemap.xml` y los recursos con HTTP 200. El sitemap publicado coincide con el paquete y el robots público permite Googlebot, Bingbot y OAI-SearchBot. La propiedad `https://closer.com.py/` quedó verificada en Google Search Console el 21/09/2026 mediante la etiqueta HTML permanente de la portada. Google procesó correctamente `sitemap.xml` y detectó sus 20 URLs; además, `/meta-ads` se añadió a la cola prioritaria de rastreo. Revisar cobertura de indexación, consultas, impresiones y clics con el tiempo. El sitio no incorpora medición de posiciones ni nuevas herramientas de analítica.
 
@@ -121,7 +133,7 @@ El sitio existente está en Cloudflare Pages, cuenta `thomasyaluff@gmail.com` (`
 
 Desde el 22/10/2026, `.github/workflows/deploy-closer-pages.yml` publica cada push a `master` de `closerpyhub/closer-web`. La conexión Git nativa de Pages conservaba el antiguo dueño `thomasyaluff-ui`; quedó deshabilitada para mantener un único publicador, sin borrar el proyecto ni cambiar DNS. GitHub Actions usa únicamente el secreto de este repositorio `CLOUDFLARE_CLOSER_PAGES_TOKEN`, con Pages Edit en esa cuenta y vencimiento 22/10/2027. Cloudflare no limita este permiso a un solo proyecto: el workflow y `tools/check_hosting.py` fijan el destino exacto y fallan antes de publicar si difieren proyecto, rama, cuenta o dominios. El token no incluye DNS, correo ni facturación; renovar el secreto antes de su vencimiento. El MCP sigue siendo solo lectura.
 
-El workflow valida el sitio y las pruebas de destino, exporta solo los 46 archivos públicos y agrega la marca `closer-release` con el SHA real a cada HTML exportado. Tras publicar, comprueba el commit canónico de Pages y las 24 páginas de ambos dominios, además de comparar los recursos con el paquete. Se preservan las inserciones de analítica/protección de correo y el bloque administrado de robots de Cloudflare. Una web HTTP 200 sin la marca actual no se acepta como publicación correcta.
+El workflow valida el sitio y las pruebas de destino, exporta únicamente los archivos públicos y agrega la marca `closer-release` con el SHA real a cada HTML exportado. Tras publicar, comprueba el commit canónico de Pages y todas las páginas del paquete en ambos dominios, además de comparar los recursos con el paquete. Se preservan las inserciones de analítica/protección de correo y el bloque administrado de robots de Cloudflare. Una web HTTP 200 sin la marca actual no se acepta como publicación correcta.
 
 Como recuperación manual autorizada, puede usarse Wrangler con el directorio público exportado. No subir la raíz ni habilitar de nuevo el publicador Git antiguo:
 
