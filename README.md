@@ -27,7 +27,7 @@ Como alternativa, en una terminal que permanezca abierta se puede ejecutar `pyth
 - Seis guías editoriales: presupuesto de redes y chatbots, elección de Ads, tipo de web, preparación de chatbot y medición de consultas.
 - `index-opcion-servicios-clara.html`: variante histórica conservada y adaptada al diseño compartido.
 - `styles.css`: identidad, componentes y comportamiento responsive de todo el sitio.
-- `script.js`: navegación, cotizador y preparación de contacto.
+- `script.js`: navegación, cotizador, preparación de contacto y medición opcional con consentimiento.
 - `assets/`: logo original, imágenes y fuentes locales. Los originales se conservan; la web utiliza versiones WebP optimizadas.
 - `tools/check_site.py`: validación estática sin dependencias externas.
 - `tools/start-preview.ps1`: inicio de la vista previa local con registros independientes de la terminal.
@@ -57,7 +57,7 @@ node --check script.js
 git diff --check
 ```
 
-La comprobación estática revisa las 32 rutas locales, títulos, descripciones, H1, IDs, archivos locales y destinos de anclas. También valida canonical, coherencia de Open Graph, JSON-LD, política de indexación, sitemap y permisos de rastreo. Las guías deben llevar `Article` enlazado correctamente con su `WebPage`; los servicios siguen requiriendo `Service`. No realiza solicitudes externas.
+La comprobación estática revisa las 33 rutas locales, títulos, descripciones, H1, IDs, archivos locales y destinos de anclas. También valida canonical, coherencia de Open Graph, JSON-LD, política de indexación, sitemap y permisos de rastreo. Las guías deben llevar `Article` enlazado correctamente con su `WebPage`; los servicios siguen requiriendo `Service`. No realiza solicitudes externas.
 
 Verificación del rediseño (10/09/2026): 23 páginas en 390, 768 y 1440 px; navegación con teclado y móvil; comportamiento sin JavaScript; contacto con entradas largas; cotizador y reinicio. Sin errores de JavaScript, recursos faltantes ni desbordamiento del documento. Las pruebas no enviaron mensajes.
 
@@ -109,7 +109,7 @@ Las fichas de mailing, Manychat y BI desarrollan esas soluciones concretas. `met
 
 Cada página tiene título y descripción propios, canonical HTTPS, Open Graph y un grafo JSON-LD con la identidad de la organización, el sitio y la página. Cloudflare Pages redirige las rutas `.html` a direcciones sin extensión: los canonical, Open Graph, identificadores JSON-LD y sitemap usan esas direcciones públicas finales. Los enlaces internos conservan `.html` para funcionar también en la vista previa; la navegación reconoce ambos formatos. Las páginas de servicios y planes incluyen `Service`; las internas, `BreadcrumbList`. El catálogo de la portada enlaza las siete áreas. El marcado describe el contenido y no garantiza resultados enriquecidos.
 
-El sitemap local de la tanda SEO/GEO contiene 28 URLs canónicas indexables: las 20 originales más Sobre Closer, Recursos y seis guías. La variante `index-opcion-servicios-clara.html` y las tres fichas históricas de chatbots llevan `noindex, follow` y se excluyen del sitemap. Conservan sus URLs, su contenido y sus precios; no se redirigen a productos con otro alcance. Antes de promover esas fichas antiguas, confirmar su vigencia comercial y actualizar tanto el sitemap como la comprobación estática.
+El sitemap local contiene 29 URLs canónicas indexables: las 20 originales más Sobre Closer, Recursos, Privacidad y seis guías. La variante `index-opcion-servicios-clara.html` y las tres fichas históricas de chatbots llevan `noindex, follow` y se excluyen del sitemap. Conservan sus URLs, su contenido y sus precios; no se redirigen a productos con otro alcance. Antes de promover esas fichas antiguas, confirmar su vigencia comercial y actualizar tanto el sitemap como la comprobación estática.
 
 `robots.txt` permite el rastreo de páginas y recursos públicos a través de la regla general, que incluye Googlebot, Bingbot y OAI-SearchBot. Excluye las carpetas internas `.git`, `materials`, `tools` y el README. Estas reglas no son controles de acceso: la publicación debe incluir solo archivos públicos. No se añadieron reglas específicas de entrenamiento de modelos. Ninguna página con `noindex` se bloquea al rastreo, para que el buscador pueda leer esa directiva.
 
@@ -119,11 +119,11 @@ La implementación sigue [las recomendaciones de Google para sus funciones con I
 
 Las seis guías responden una decisión distinta y enlazan hacia el servicio o contacto correspondiente: gestión de redes, presupuesto de chatbot, Meta Ads frente a Google Ads, landing/web/tienda, preparación de chatbot y recorrido de clic a venta. Sus datos de precio describen únicamente condiciones publicadas por Closer; no son precios de mercado. Los artículos usan autor institucional y no atribuyen resultados a clientes.
 
-La medición comercial adicional permanece desactivada: falta la propiedad autorizada, su ID público y los hechos finales del aviso de privacidad. Cloudflare Web Analytics existente no se modifica. Tampoco hay casos de estudio nuevos: requieren selección, evidencia y permiso de cada cliente. La guía de ejecución y sus estados están en `work/matt-pocock/seo-geo/` y no se exportan al sitio público.
+La medición adicional usa GA4 directo (`G-16GG9X2PR5`) y sólo carga tras una aceptación expresa en el navegador. Emite una vista de página saneada y cuatro acciones cerradas: inicio del cotizador, preparación de consulta y clics a WhatsApp o correo. No transmite campos de formulario, mensajes, teléfonos, correos, precios ni enlaces personalizados. La medición mejorada, Google Signals y la personalización publicitaria están desactivadas; el pie ofrece acceso a Privacidad y a las preferencias. Cloudflare Web Analytics existente no se modifica. Tampoco hay casos de estudio nuevos: requieren selección, evidencia y permiso de cada cliente. La guía de ejecución y sus estados están en `work/matt-pocock/seo-geo/` y no se exportan al sitio público.
 
 ### Verificación después de una publicación autorizada
 
-Preparar el paquete público ejecutando `python tools/build_site.py`. Primero valida el sitio y después copia las 32 páginas, CSS/JS, sitemap/robots, los recursos usados y la licencia de la fuente a una carpeta temporal nueva. Imprime su ruta como `PUBLIC_SITE_DIR`. También acepta `--output` con una carpeta nueva o vacía; no borra contenido existente. El total de archivos y peso se informan al ejecutar; no son un número fijo. No subir la raíz del repositorio: incluye materiales y herramientas que no corresponden a la web pública.
+Preparar el paquete público ejecutando `python tools/build_site.py`. Primero valida el sitio y después copia las 33 páginas, CSS/JS, sitemap/robots, los recursos usados y la licencia de la fuente a una carpeta temporal nueva. Imprime su ruta como `PUBLIC_SITE_DIR`. También acepta `--output` con una carpeta nueva o vacía; no borra contenido existente. El total de archivos y peso se informan al ejecutar; no son un número fijo. No subir la raíz del repositorio: incluye materiales y herramientas que no corresponden a la web pública.
 
 La versión renovada se publicó el 10/09/2026. Se comprobó que el dominio canónico entrega las páginas, `robots.txt`, `sitemap.xml` y los recursos con HTTP 200. El sitemap publicado coincide con el paquete y el robots público permite Googlebot, Bingbot y OAI-SearchBot. La propiedad `https://closer.com.py/` quedó verificada en Google Search Console el 21/09/2026 mediante la etiqueta HTML permanente de la portada. Google procesó correctamente `sitemap.xml` y detectó sus 20 URLs; además, `/meta-ads` se añadió a la cola prioritaria de rastreo. Revisar cobertura de indexación, consultas, impresiones y clics con el tiempo. El sitio no incorpora medición de posiciones ni nuevas herramientas de analítica.
 

@@ -29,6 +29,7 @@ REQUIRED_ROUTES = {
     "plan-automatizacion-mailing.html", "plan-automatizacion-manychat.html",
     "plan-campana-creativa-completa.html",
     "nosotros.html", "recursos.html",
+    "privacidad.html",
     "precio-gestion-redes-paraguay.html", "precio-chatbot-whatsapp-paraguay.html",
     "meta-ads-vs-google-ads.html", "landing-page-o-web-institucional.html",
     "preparar-chatbot-whatsapp.html", "medir-consultas-whatsapp.html",

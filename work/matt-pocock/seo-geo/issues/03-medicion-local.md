@@ -1,7 +1,7 @@
 # 03 · Preparar medición y consentimiento en el sitio
 
-Status: needs-info
-Blocked by: E03/E04: ID autorizado de GA4 y aviso de privacidad factual completo
+Status: in-progress
+Blocked by: comprobación de recepción en la propiedad después del despliegue
 
 ## Entrega
 
@@ -29,3 +29,5 @@ Instrumentación local comprobada que conserva contacto/cotizador y mide sólo a
 ## Registro de ejecución
 
 23/10/2026 · No se agregó un cargador, banner ni página de privacidad incompleta: falta la propiedad autorizada, su ID público y los hechos finales del aviso. Cloudflare Web Analytics existente se conserva sin cambios. El contacto y cotizador siguen funcionando sin analítica adicional; `node --check script.js` pasó. Para activar este ticket se requieren E03/E04 y la autorización indicada en 04.
+
+23/10/2026 · Se creó la propiedad GA4 autorizada y se incorporó su ID público real mediante `data-ga4-id` en las páginas. El cargador directo de `script.js` permanece sin proveedor antes de la aceptación; conserva publicidad/Signals desactivados, `send_page_view: false`, preferencia local versionada de 90 días y revocación que limpia cookies accesibles y reinicia el documento. La instrumentación sólo permite `page_view`, `quote_start`, `contact_prepare`, `whatsapp_click` y `email_click`, con rutas, servicios y ubicaciones controladas. La vista previa comprobó ausencia de script/cola antes de elegir; luego interceptó la etiqueta para comprobar el único `page_view` saneado y la revocación, sin enviar datos a Google. Falta observar recepción desde la versión publicada.

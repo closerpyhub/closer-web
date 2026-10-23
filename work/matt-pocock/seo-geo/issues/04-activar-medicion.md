@@ -1,7 +1,7 @@
 # 04 · Configurar y comprobar recepción real de medición
 
-Status: needs-info
-Blocked by: ID público de una propiedad existente, contrato de privacidad E03/E04 y autorización de configuración externa
+Status: in-progress
+Blocked by: observación de recepción real desde la versión publicada
 
 ## Entrega
 
@@ -31,3 +31,5 @@ Este ticket no bloquea 17/18. Si no se completa, publicar la implementación des
 ## Registro de ejecución
 
 23/10/2026 · Se verificó sólo por nombres de archivo y variables de entorno (sin leer secretos) que el repositorio versionado y este entorno no contienen un ID GA4/GTM o una configuración de medición reutilizable. No se creó otra propiedad, no se añadió un tracker, no se activó captura automática ni se modificó Cloudflare Web Analytics. Faltan el ID público de una propiedad existente, los hechos E03/E04 del aviso de privacidad y la autorización para configurar/validar la recepción.
+
+23/10/2026 · La persona responsable autorizó la creación de una propiedad GA4 para Closer y se configuró la fuente web `https://closer.com.py` con medición mejorada desactivada. También se desactivaron Signals y personalización publicitaria; no se añadieron píxeles ni GTM. El código local usa el ID público de esa fuente, pero la prueba local bloqueó la carga de la etiqueta y no contaminó la propiedad. Después de publicar, falta observar un evento de prueba sin datos personales en la propiedad correcta antes de cerrar este ticket.
