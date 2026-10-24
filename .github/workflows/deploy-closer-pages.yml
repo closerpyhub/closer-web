@@ -48,7 +48,16 @@ jobs:
           wrangler pages deploy "$RUNNER_TEMP/closer-public"
           --project-name closer-web --branch master
           --commit-hash "$GITHUB_SHA" --commit-dirty=false
-      - name: Verify actual production commit and both public domains
+      - name: Verify actual production commit and both public domains after propagation
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_CLOSER_PAGES_TOKEN }}
-        run: python tools/check_hosting.py --commit "$GITHUB_SHA" --public-dir "$RUNNER_TEMP/closer-public"
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            if python tools/check_hosting.py --commit "$GITHUB_SHA" --public-dir "$RUNNER_TEMP/closer-public"; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 6 ]; then
+              exit 1
+            fi
+            sleep 15
+          done
