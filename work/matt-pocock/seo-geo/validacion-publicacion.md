@@ -62,7 +62,7 @@ Si el puerto está ocupado, comprobar si es la instancia correcta o usar -Port 8
 | Proveedor bloqueado o falla | No rompe formularios, cotizador o navegación |
 | Consola/recursos | Sin nuevos errores propios ni archivos ausentes |
 
-Para medición, obtener dos evidencias: primero probar wrapper/consentimiento con cargador simulado; después probar la librería real con todas sus solicitudes de recolección interceptadas antes del envío. Permitir la descarga de la librería sólo en la prueba consentida; bloquear colectores y destinos publicitarios, capturando payload sin enviarlo a una propiedad real. Usar query, UTM e identificadores publicitarios sintéticos para comprobar que no se filtran. Incluir eventos intrínsecos del proveedor. Luego, sólo con activación autorizada, observar registro persistido en la propiedad correcta. El stub no prueba el payload de la librería ni recepción real.
+Para medición, obtener dos evidencias: primero probar la carga automática y el wrapper con cargador simulado; después probar la librería real con todas sus solicitudes de recolección interceptadas antes del envío. Bloquear colectores y destinos publicitarios, capturando payload sin enviarlo a una propiedad real. Usar query, UTM e identificadores publicitarios sintéticos para comprobar que no se filtran. Incluir eventos intrínsecos del proveedor. Luego, sólo con activación autorizada, observar registro persistido en la propiedad correcta. El stub no prueba el payload de la librería ni recepción real.
 
 Si una herramienta necesaria no existe, documentar la limitación y preparar la comprobación equivalente disponible; no instalar una nueva herramienta opcional global sin permiso ni declarar prueba observada.
 
@@ -134,7 +134,7 @@ python tools/check_hosting.py --commit $releaseSha --public-dir '<PUBLIC_SITE_DI
 El verificador necesita CLOUDFLARE_ACCOUNT_ID y CLOUDFLARE_API_TOKEN autorizados en el entorno. El workflow ya dispone de su credencial. Si localmente no está disponible, observar evidencia completa del verificador ejecutado por ese workflow; no obtener otro token ni inventar una pasada local.
 
 9. El resultado exige workflow exitoso, deployment productivo del SHA y ambos hosts sirviendo todas las páginas/recursos del export. No basta un HTTP 200.
-10. Navegador público: una guía/caso, recursos, contacto, móvil y consentimiento. Verificar eventos reales si la fase A de 04 está autorizada/configurada; esa recepción permite cerrar su fase B. Completar medición pública de rendimiento de las nuevas rutas sin atribuir datos de la versión anterior.
+10. Navegador público: una guía/caso, recursos, contacto, móvil y carga automática de GA4 sin banner. Verificar eventos reales si la fase A de 04 está autorizada/configurada; esa recepción permite cerrar su fase B. Completar medición pública de rendimiento de las nuevas rutas sin atribuir datos de la versión anterior.
 11. Registrar fecha D0, SHA, versión/URLs y evidencia. No declarar aceptación humana por haber publicado.
 
 Si falla: identificar fase y preservar evidencia. No publicar por un proveedor alternativo, reintentar a ciegas ni ejecutar rollback de producción sin autorización para ese cambio. Preparar opción de recuperación usando el historial existente.

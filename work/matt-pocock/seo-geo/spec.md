@@ -46,7 +46,7 @@ El programa combina entregables que el agente puede preparar localmente con comp
 - Mantener la identidad única de la organización, el sitio y sus páginas. Los artículos añaden una entidad editorial vinculada a la página; las páginas auxiliares no pasan a ser servicios.
 - Reusar las herramientas de comprobación y exportación. Extender sus reglas sólo para representar los nuevos tipos de página; conservar sus controles.
 - Preparar instrumentación mínima para acciones comerciales, con parámetros de vocabulario cerrado, sin contenido de formularios ni enlaces WhatsApp completos.
-- Usar GA4 como destino previsto de eventos si el usuario autoriza una propiedad. Activación con consentimiento básico, configuración pública no secreta y desactivación completa cuando falta configuración o el visitante rechaza.
+- Usar GA4 como destino previsto de eventos si el usuario autoriza una propiedad. Desde 24/10/2026 la carga es automática, sin banner ni preferencias; sigue desactivada cuando falta configuración y conserva configuración pública no secreta.
 - Conservar la analítica de Cloudflare existente. Documentar sus diferencias de cobertura frente a GA4 y los registros comerciales.
 - Rastrear rendimiento y citas por fecha, dispositivo/motor y alcance de la fuente. Las pruebas manuales de IA son una muestra.
 - Usar ventanas comparables de 28 días, con revisiones a 7/28/56/84 días desde la publicación efectiva.
@@ -58,7 +58,7 @@ La superficie principal de verificación es la página/recorrido que recibe el v
 
 - Mantener comprobación de enlaces, títulos, descripciones, H1, canonical, OG, JSON-LD, sitemap y rastreo.
 - Añadir pruebas con Python estándar para reglas editoriales y exclusión de archivos privados del paquete.
-- Probar instrumentación en navegador interceptando el destino de medición: cero solicitudes antes de consentimiento, payload permitido y una emisión por acción definida.
+- Probar instrumentación en navegador interceptando el destino de medición: carga automática, payload permitido y una emisión por acción definida.
 - Verificar teclado, móvil, JavaScript bloqueado, almacenamiento bloqueado y errores del proveedor.
 - Mantener los casos de regresión existentes de contacto y cotizador.
 - Verificar producción por SHA y recursos exportados en ambos dominios después de una publicación autorizada.

@@ -17,7 +17,7 @@ Propiedad y flujo correctos recibiendo eventos seguros de la versión publicada 
 ## Fase B · Recepción, después de 18
 
 5. Observar recepción en la propiedad correcta mediante debug/pruebas identificadas.
-6. Documentar límites por consentimiento, filtros y datos de prueba. Sólo entonces cerrar 04.
+6. Documentar límites de configuración, filtros y datos de prueba. Sólo entonces cerrar 04.
 
 ## Aceptación
 

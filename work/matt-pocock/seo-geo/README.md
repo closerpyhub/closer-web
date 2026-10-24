@@ -32,7 +32,7 @@ Las instrucciones de este paquete son específicas del estado observado. Si el c
 - Las primeras cuatro guías cubren presupuesto de redes, presupuesto de chatbot, comparación de canales y elección de web. Las dos siguientes cubren preparación de un chatbot y medición de consultas. Son hipótesis comerciales priorizadas, no palabras clave con demanda ya demostrada.
 - Autor institucional inicial: Closer. Las personas y credenciales sólo se incorporan si están verificadas. La fecha editorial refleja la revisión/publicación real.
 - Mantener precios/alcances existentes. Los artículos de precio se basan en la oferta de Closer y no presentan un estudio de precios de todo Paraguay.
-- Reutilizar Cloudflare Web Analytics para su medición actual. Para eventos comerciales, preparar GA4 con consentimiento básico y sin publicidad; activarlo sólo con propiedad e instrucciones autorizadas. Esta elección técnica está detallada en medicion.md.
+- Reutilizar Cloudflare Web Analytics para su medición actual. GA4 mide los eventos comerciales al abrir una página configurada, sin aviso ni preferencia de medición, y sin publicidad. Esta elección técnica está detallada en medicion.md.
 - La instrumentación mide acciones en el sitio. Contactos recibidos, calificación y ventas se confirman mediante el registro comercial autorizado; no se deducen de clics.
 - Evaluar resultados por ventanas de 28 días desde la publicación. Los controles de los días 7, 28, 56 y 84 son hitos del plan; este documento no crea automatizaciones.
 
@@ -45,7 +45,7 @@ Los números son IDs estables. Un ticket está disponible cuando sus dependencia
 | [01](issues/01-baseline-local.md) | Estado inicial local y mapa de cambios | Ninguno |
 | [02](issues/02-linea-base-buscadores.md) | Datos SEO, demanda y muestra GEO actuales | 01 |
 | [05](issues/05-soporte-editorial.md) | Checker/export compatibles con páginas editoriales | 01 |
-| [03](issues/03-medicion-local.md) | Eventos seguros y consentimiento probados localmente | 05 |
+| [03](issues/03-medicion-local.md) | Eventos seguros y carga automática probados localmente | 05 |
 | [04](issues/04-activar-medicion.md) | Preparación autorizada; recepción real después de publicar | 03 + datos humanos para preparar; 18 sólo para cerrar recepción |
 | [06](issues/06-sobre-closer.md) | Identidad institucional y perfiles verificados | 05 |
 | [07](issues/07-guia-precio-redes.md) | Guía de presupuesto de redes | 05, 06 |

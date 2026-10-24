@@ -27,7 +27,7 @@ Como alternativa, en una terminal que permanezca abierta se puede ejecutar `pyth
 - Seis guías editoriales: presupuesto de redes y chatbots, elección de Ads, tipo de web, preparación de chatbot y medición de consultas.
 - `index-opcion-servicios-clara.html`: variante histórica conservada y adaptada al diseño compartido.
 - `styles.css`: identidad, componentes y comportamiento responsive de todo el sitio.
-- `script.js`: navegación, cotizador, preparación de contacto y medición opcional con consentimiento.
+- `script.js`: navegación, cotizador, preparación de contacto y medición directa con GA4.
 - `assets/`: logo original, imágenes y fuentes locales. Los originales se conservan; la web utiliza versiones WebP optimizadas.
 - `tools/check_site.py`: validación estática sin dependencias externas.
 - `tools/start-preview.ps1`: inicio de la vista previa local con registros independientes de la terminal.
@@ -119,7 +119,7 @@ La implementación sigue [las recomendaciones de Google para sus funciones con I
 
 Las seis guías responden una decisión distinta y enlazan hacia el servicio o contacto correspondiente: gestión de redes, presupuesto de chatbot, Meta Ads frente a Google Ads, landing/web/tienda, preparación de chatbot y recorrido de clic a venta. Sus datos de precio describen únicamente condiciones publicadas por Closer; no son precios de mercado. Los artículos usan autor institucional y no atribuyen resultados a clientes.
 
-La medición adicional usa GA4 directo (`G-16GG9X2PR5`) y sólo carga tras una aceptación expresa en el navegador. Emite una vista de página saneada y cuatro acciones cerradas: inicio del cotizador, preparación de consulta y clics a WhatsApp o correo. No transmite campos de formulario, mensajes, teléfonos, correos, precios ni enlaces personalizados. La medición mejorada, Google Signals y la personalización publicitaria están desactivadas; el pie ofrece acceso a Privacidad y a las preferencias. Cloudflare Web Analytics existente no se modifica. Tampoco hay casos de estudio nuevos: requieren selección, evidencia y permiso de cada cliente. La guía de ejecución y sus estados están en `work/matt-pocock/seo-geo/` y no se exportan al sitio público.
+La medición adicional usa GA4 directo (`G-16GG9X2PR5`) y carga al abrir el sitio, sin aviso ni preferencia de medición. Emite una vista de página saneada y cuatro acciones cerradas: inicio del cotizador, preparación de consulta y clics a WhatsApp o correo. No transmite campos de formulario, mensajes, teléfonos, correos, precios ni enlaces personalizados. La medición mejorada, Google Signals y la personalización publicitaria están desactivadas; el pie ofrece acceso a Privacidad. Cloudflare Web Analytics existente no se modifica. Tampoco hay casos de estudio nuevos: requieren selección, evidencia y permiso de cada cliente. La guía de ejecución y sus estados están en `work/matt-pocock/seo-geo/` y no se exportan al sitio público.
 
 ### Verificación después de una publicación autorizada
 

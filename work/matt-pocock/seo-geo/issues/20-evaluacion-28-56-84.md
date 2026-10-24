@@ -10,7 +10,7 @@ Tres cortes comparables y una recomendación sustentada para continuar el crecim
 ## Pasos en cada corte
 
 1. Aplicar ventanas/filtros de medicion.md y D0 por URL.
-2. Leer clics/consultas/indexación, acciones consentidas, agregado comercial y panel GEO con su cobertura.
+2. Leer clics/consultas/indexación, acciones de GA4, agregado comercial y panel GEO con su cobertura.
 3. Separar marca/no marca, motor, servicio, página y fechas; mostrar absolutos cuando la muestra sea pequeña.
 4. Aplicar tabla de decisiones de evidencia-y-seguimiento.md.
 5. Preparar hasta tres siguientes acciones concretas por impacto observado; no implementarlas fuera del alcance autorizado.
@@ -28,7 +28,7 @@ Tres cortes comparables y una recomendación sustentada para continuar el crecim
 
 | Corte | Estado inicial | Evidencia | Próximo paso |
 | --- | --- | --- | --- |
-| D+28 · 20/11/2026 | Pendiente | D0 técnico publicado el 23/10; GA4 con consentimiento ya recibe datos y Search Console/Bing tienen señales iniciales, pero falta la ventana transcurrida y comparable | Obtener primer período comparable |
+| D+28 · 20/11/2026 | Pendiente | D0 técnico publicado el 23/10; GA4 ya recibe datos y Search Console/Bing tienen señales iniciales, pero falta la ventana transcurrida y comparable | Obtener primer período comparable |
 | D+56 · 18/12/2026 | Pendiente | Pendiente | Obtener segundo período comparable |
 | D+84 · 15/01/2027 | Pendiente | Pendiente | Cerrar evaluación |
 

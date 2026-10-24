@@ -84,7 +84,7 @@ Cada imagen editorial se muestra con src relativo para que el mecanismo actual l
 
 ## Navegación y recursos compartidos
 
-- Añadir Sobre Closer y Recursos al pie compartido cuando sus páginas estén listas; Privacidad y “Preferencias de medición” al implementar analítica.
+- Añadir Sobre Closer, Recursos y Privacidad al pie compartido cuando sus páginas estén listas; desde 24/10/2026 la analítica carga automáticamente y no expone “Preferencias de medición”.
 - Conservar las ocho áreas del menú y evitar sobrecargar el header móvil.
 - En portada: enlace a nosotros desde “Somos Closer”; bloque pequeño “Guías para decidir” con las cuatro primeras guías; los casos autorizados se añaden junto a las marcas sin atribuir un caso a todos los logos.
 - Añadir enlaces contextuales en servicios según contenido.md. Preservar contacto, cotizador y todas las rutas históricas.

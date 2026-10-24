@@ -10,7 +10,7 @@ Consultar para tickets 02–04 y 20. Es una decisión de implementación previst
 | Bing Webmaster Tools | Rastreo, indexación y rendimiento de su cobertura | Todo el mercado de búsqueda |
 | Bing AI Performance, si está disponible | Citas/páginas/consultas en experiencias cubiertas | Ranking universal de IA ni citas de todos los asistentes |
 | Cloudflare Web Analytics existente | Tráfico/experiencia dentro de su cobertura | Contactos comerciales confirmados |
-| GA4 autorizado | Acciones de visitantes con consentimiento y medición operativa | Todas las visitas ni envío efectivo de WhatsApp |
+| GA4 autorizado | Acciones de visitantes con medición operativa | Envío efectivo de WhatsApp ni venta confirmada |
 | Registro comercial autorizado | Contactos, oportunidades y ventas que realmente registra | Origen exacto de cada contacto si no se conoce |
 | Panel manual de preguntas GEO | Respuestas y fuentes observadas en esa muestra/fecha | Participación universal ni resultado estable garantizado |
 
@@ -39,34 +39,28 @@ Configuración pública: atributo data-ga4-id del elemento html, presente sólo 
 
 La lógica vive en script.js; estilos en styles.css. No añadir servicio de ingestión propio.
 
-Referencia de implementación: [eventos con gtag.js](https://developers.google.com/analytics/devguides/collection/ga4/events). Aplicar el contrato y consentimiento de este documento al usar la API; el ejemplo genérico del proveedor no sustituye estas restricciones.
+Referencia de implementación: [eventos con gtag.js](https://developers.google.com/analytics/devguides/collection/ga4/events). Aplicar el contrato y restricciones de este documento al usar la API; el ejemplo genérico del proveedor no sustituye estas restricciones.
 
-## Consentimiento y privacidad
+## Carga automática y privacidad
 
-Esta es la elección de producto del plan; no constituye una afirmación de cumplimiento legal universal.
+Esta es la elección de producto vigente desde 24/10/2026; no constituye una afirmación de cumplimiento legal universal.
 
-- Modalidad básica: gtag.js y solicitudes GA4 se cargan sólo después de aceptar. Rechazo/sin elección = ninguna solicitud de la medición nueva, ni pings sin cookies.
-- Orden del cargador: preparar defaults locales de consentimiento denegado sin cargar proveedor; al aceptar, actualizar sólo analytics_storage=granted. Conservar ad_storage, ad_user_data y ad_personalization=denied, Signals/personalización desactivados y send_page_view=false. Poner estos valores antes de cualquier config/inicialización del proveedor, cargar la librería y emitir una sola página saneada. No asociar “aceptar medición” a consentimiento publicitario.
-- Banner no modal, accesible por teclado: “Podemos usar medición adicional para entender qué contenidos y acciones ayudan a quienes visitan la web. Podés aceptarla o continuar sin ella.” Botones con igual claridad: “Aceptar medición” y “Continuar sin medición”; enlace a privacidad.html.
-- En el pie: “Preferencias de medición”. Permite cambiar/rechazar sin impedir acceso al sitio.
-- Estado local mínimo: granted o denied, versión y vencimiento a 90 días. Es una elección técnica revisable, no plazo legal atribuido. Si localStorage falla, respetar elección en memoria para esa página y volver a estado no elegido en navegación siguiente.
-- Al retirar: bloquear nuevos eventos, limpiar cola local y cookies GA accesibles del sitio que se hubieran creado, actualizar preferencia y reiniciar el documento de forma controlada para descargar el proveedor. No afirmar que borra datos históricos del servidor. Mantener el rechazo después de recargar.
-- Escuchar storage para aplicar el retiro también en otras pestañas abiertas; una pestaña con el proveedor cargado debe bloquear/reiniciar su medición al recibir rechazo o eliminación de la preferencia. Probar explícitamente dos pestañas; no limitar revocación al manejador del botón actual.
-- Privacidad describe sólo hechos activos: formulario preparado en el dispositivo; apertura voluntaria de WhatsApp; servicios externos existentes; datos analíticos previstos, consentimiento y contacto. Revisar con el responsable datos organizativos, condiciones/retención y derechos aplicables antes de activar. No copiar un aviso legal que afirme garantías no verificadas.
-- Si el aviso no puede completarse, conservar su borrador fuera de la raíz y entregar la medición desactivada: sin ID, banner ni enlaces a una página inexistente. 04 queda bloqueado hasta completar el aviso. Ese estado no bloquea publicar otras mejoras.
-- Mantener Cloudflare Web Analytics existente. El rechazo de esta medición adicional no puede presentarse como rechazo de toda solicitud de Cloudflare o eliminación de sus datos. Describir el alcance por separado.
+- gtag.js y las solicitudes de GA4 se cargan al abrir una página configurada, sin banner, preferencia local ni mecanismo de rechazo en el sitio.
+- La configuración mantiene medición mejorada, Google Signals y personalización publicitaria desactivados, además de `send_page_view=false`; el sitio emite una sola página saneada de forma explícita.
+- La página de Privacidad describe sólo hechos activos: formulario preparado en el dispositivo, apertura voluntaria de WhatsApp, servicios externos existentes, datos analíticos previstos y contacto. No copiar un aviso legal que afirme garantías no verificadas.
+- Mantener Cloudflare Web Analytics existente y describir su alcance por separado.
 
 ## Eventos: contrato cerrado
 
 | Evento | Disparo | Parámetros adicionales |
 | --- | --- | --- |
-| page_view | Una vez al iniciar medición en la página consentida | Sólo datos de página saneados |
+| page_view | Una vez al cargar una página configurada | Sólo datos de página saneados |
 | quote_start | Primera interacción humana con un control del cotizador, una vez por carga | service=gestion-redes; placement=quote |
 | contact_prepare | Formulario válido y vista previa construida | service del select normalizado; placement=contact_form |
 | whatsapp_click | Activación real de enlace WhatsApp | service y placement controlados |
 | email_click | Activación real de enlace mailto | placement controlado |
 
-Estos son cinco eventos controlados por la aplicación. GA4 puede generar eventos intrínsecos como first_visit, session_start o user_engagement; desactivar medición mejorada no garantiza su ausencia. Todo evento del proveedor debe respetar ubicación/referrer saneados y las restricciones de consentimiento. Registrar su comportamiento real en la prueba del colector.
+Estos son cinco eventos controlados por la aplicación. GA4 puede generar eventos intrínsecos como first_visit, session_start o user_engagement; desactivar medición mejorada no garantiza su ausencia. Todo evento del proveedor debe respetar ubicación/referrer saneados y las restricciones de este documento. Registrar su comportamiento real en la prueba del colector.
 
 Parámetro común page_path: ruta canónica conocida de la página, sin query ni hash. Los servicios son: gestion-redes, meta-ads, google-ads, chatbots-ia, paginas-web, apps-sistemas, campanias-creativas, automatizaciones-bi, multiple, unknown. Mapear las opciones del formulario a esos tokens; no copiar texto arbitrario.
 
@@ -79,7 +73,7 @@ placement permitido: header, footer, hero, body, contact_form, quote. Asignar po
 3. contact_prepare ocurre después de reportValidity y de preparar correctamente la vista previa. Una segunda preparación deliberada puede emitir otra acción; un mismo submit no puede duplicarse por dos listeners.
 4. whatsapp_click se registra por activación, incluso en enlace cuyo href se genera después. Un único manejador delegado permite mouse/teclado sin duplicar click + pointer.
 5. El enlace continúa su comportamiento sin esperar a la analítica. Las pruebas interceptan navegación; nunca envían el mensaje.
-6. Sin aceptación previa se descartan eventos, no se almacenan ni reenvían al aceptar. Al aceptar se mide la página actual, no el historial previo.
+6. La carga automática mide la página actual; no reconstruye navegación previa a la carga de GA4.
 7. Desactivar en el flujo GA4 la medición mejorada automática de formularios, clics salientes, búsquedas y otros eventos que dupliquen o capturen URLs. Desactivar envío automático de page_view y emitirlo una sola vez saneado.
 8. Configurar page_location con canonical sin query/hash y page_referrer saneado como origen externo; si es interno, ruta canónica conocida o vacío. No conservar paths externos ni queries. Asegurar que la configuración rige también eventos posteriores.
 9. No pasar UTM arbitrarios. Primera versión conserva atribución disponible por referrer saneado y registra su limitación. Si luego se desean campañas etiquetadas, requieren taxonomía de valores aprobados y comprobación de que ningún dato personal llega al proveedor.
@@ -91,7 +85,7 @@ placement permitido: header, footer, hero, body, contact_form, quote. Asignar po
 1. Verificar organización, propiedad y flujo correctos, ID y alcance autorizado.
 2. Presentar cambios externos concretos: medición mejorada desactivada, señales/publicidad desactivadas y retención propuesta mínima disponible adecuada al informe (preferir 2 meses para datos de eventos/usuarios si la propiedad lo permite). Confirmar que la configuración elegida no sobrescribe una política vigente; si existe otra, respetarla y registrar.
 3. Realizar cambios externos sólo con autorización expresa para esa configuración. Añadir ID al sitio local.
-4. Probar payload y consentimiento con endpoints interceptados antes de producción. No contaminar informes con datos de personas reales.
+4. Probar carga automática y payload con endpoints interceptados antes de producción. No contaminar informes con datos de personas reales.
 5. Después de publicar la implementación autorizada, observar los eventos de prueba identificados en la propiedad correcta, usando mecanismo de debug disponible y documentando cómo se excluyen del informe.
 6. Crear dimensiones personalizadas sólo para service y placement si hacen falta; no duplicar métricas automáticas ni crear dimensiones de alta cardinalidad.
 7. Releer configuración persistida. Sólo entonces declarar medición activa. Sin acceso, dejar configuración/código listos y evidencia de limitación.
@@ -108,4 +102,4 @@ Conservar el CRM/registro existente si lo hay. No crear una integración o CRM p
 - Costo por contacto de pauta = inversión de pauta / contactos atribuibles del mismo alcance. Costo total añade gestión si se declara.
 - Conversión comercial = oportunidades únicas de la cohorte que tuvieron al menos una venta dentro de la ventana / oportunidades únicas de esa cohorte. Cada oportunidad cuenta una vez; transacciones totales van aparte. Si faltan atribución o denominador, informar no calculable.
 
-GA4, GSC y Cloudflare tienen coberturas, consentimiento, zonas y métodos distintos; no exigir que sus totales coincidan ni sumar sus sesiones.
+GA4, GSC y Cloudflare tienen coberturas, zonas y métodos distintos; no exigir que sus totales coincidan ni sumar sus sesiones.

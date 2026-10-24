@@ -11,7 +11,7 @@ Evaluación reproducible de rendimiento/rastreo y correcciones locales justifica
 
 1. Seguir validacion-publicacion.md: páginas representativas, móvil/escritorio, campo vs laboratorio.
 2. Capturar baseline público de rutas ya existentes y anotar disponibilidad de CrUX. Medir nuevas páginas/cambios locales con laboratorio sobre preview; PSI del dominio actual no prueba una modificación local.
-3. Corregir sólo causas verificadas dentro de este sitio; preservar legibilidad, contacto y consentimiento.
+3. Corregir sólo causas verificadas dentro de este sitio; preservar legibilidad, contacto y medición configurada.
 4. Repetir medición comparable y regresiones de las páginas afectadas.
 5. Comprobar robots/canonical/sitemap y acceso mediante herramientas autorizadas.
 6. Documentar límites de verificación de bots/WAF sin ampliar permisos.

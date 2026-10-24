@@ -251,12 +251,8 @@ builders.forEach((builder, builderIndex) => {
 });
 
 const analyticsMeasurementId = document.documentElement.dataset.ga4Id || "";
-const analyticsConsentKey = "closer-analytics-consent";
-const analyticsConsentVersion = 1;
-const analyticsConsentLifetime = 90 * 24 * 60 * 60 * 1000;
 const analyticsIdPattern = /^G-[A-Z0-9]{6,}$/;
 const analyticsConfigured = analyticsIdPattern.test(analyticsMeasurementId);
-let analyticsConsentInMemory = null;
 let analyticsEnabled = false;
 
 const analyticsServices = new Set([
@@ -280,58 +276,6 @@ const contactServices = {
   "Google Ads": "google-ads",
   "Automatización o BI": "automatizaciones-bi",
   "Necesito orientación / varios servicios": "multiple",
-};
-
-const readAnalyticsConsent = () => {
-  try {
-    const stored = window.localStorage.getItem(analyticsConsentKey);
-    if (!stored) return analyticsConsentInMemory;
-    if (stored === "granted" || stored === "denied") return stored;
-    const preference = JSON.parse(stored);
-    if (
-      preference.version !== analyticsConsentVersion
-      || !["granted", "denied"].includes(preference.state)
-      || !Number.isFinite(preference.expiresAt)
-      || preference.expiresAt <= Date.now()
-    ) {
-      window.localStorage.removeItem(analyticsConsentKey);
-      return null;
-    }
-    return preference.state;
-  } catch {
-    return analyticsConsentInMemory;
-  }
-};
-
-const saveAnalyticsConsent = (value) => {
-  analyticsConsentInMemory = value;
-  try {
-    if (!value) {
-      window.localStorage.removeItem(analyticsConsentKey);
-      return;
-    }
-    window.localStorage.setItem(analyticsConsentKey, JSON.stringify({
-      state: value,
-      version: analyticsConsentVersion,
-      expiresAt: Date.now() + analyticsConsentLifetime,
-    }));
-  } catch {
-    // The choice remains active for the current page when storage is unavailable.
-  }
-};
-
-const clearAnalyticsCookies = () => {
-  const expiry = "expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  document.cookie.split(";").forEach((entry) => {
-    const name = entry.trim().split("=", 1)[0];
-    if (!name.startsWith("_ga")) return;
-    document.cookie = `${name}=; ${expiry}; path=/; SameSite=Lax`;
-    if (window.location.hostname.includes(".")) {
-      [window.location.hostname, `.${window.location.hostname}`].forEach((domain) => {
-        document.cookie = `${name}=; ${expiry}; path=/; domain=${domain}; SameSite=Lax`;
-      });
-    }
-  });
 };
 
 const analyticsPageData = () => {
@@ -403,9 +347,8 @@ const loadAnalytics = () => {
     ad_storage: "denied",
     ad_user_data: "denied",
     ad_personalization: "denied",
-    analytics_storage: "denied",
+    analytics_storage: "granted",
   });
-  window.gtag("consent", "update", { analytics_storage: "granted" });
   window.gtag("js", new Date());
   const pageData = analyticsPageData();
   window.gtag("config", analyticsMeasurementId, {
@@ -421,69 +364,7 @@ const loadAnalytics = () => {
   document.head.append(script);
 };
 
-const removeConsentBanner = () => document.querySelector("[data-analytics-consent]")?.remove();
-
-const denyAnalytics = (reopenPreferences = false, persist = true) => {
-  analyticsEnabled = false;
-  if (persist) saveAnalyticsConsent(reopenPreferences ? null : "denied");
-  else analyticsConsentInMemory = reopenPreferences ? null : "denied";
-  if (window.dataLayer) window.dataLayer.length = 0;
-  window.gtag?.("consent", "update", { analytics_storage: "denied" });
-  clearAnalyticsCookies();
-  removeConsentBanner();
-  if (window.closerAnalyticsLoaded) {
-    window.location.reload();
-    return;
-  }
-  if (reopenPreferences && analyticsConfigured) showAnalyticsConsent();
-};
-
-const showAnalyticsConsent = () => {
-  if (!analyticsConfigured || document.querySelector("[data-analytics-consent]")) return;
-  const banner = document.createElement("aside");
-  banner.className = "analytics-consent";
-  banner.dataset.analyticsConsent = "";
-  banner.setAttribute("aria-label", "Preferencias de medición");
-  banner.setAttribute("role", "dialog");
-
-  const copy = document.createElement("p");
-  copy.textContent = "Con tu permiso, usamos Google Analytics para medir visitas a esta web. La medición no se carga hasta que aceptes.";
-  const policy = document.createElement("a");
-  policy.href = "privacidad.html";
-  policy.textContent = "Ver política de privacidad";
-  const actions = document.createElement("div");
-  actions.className = "analytics-consent-actions";
-  const decline = document.createElement("button");
-  decline.type = "button";
-  decline.className = "button secondary";
-  decline.textContent = "Continuar sin medición";
-  decline.addEventListener("click", () => denyAnalytics());
-  const accept = document.createElement("button");
-  accept.type = "button";
-  accept.className = "button";
-  accept.textContent = "Aceptar medición";
-  accept.addEventListener("click", () => {
-    saveAnalyticsConsent("granted");
-    loadAnalytics();
-    removeConsentBanner();
-  });
-  actions.append(decline, accept);
-  banner.append(copy, policy, actions);
-  document.body.append(banner);
-};
-
-const consent = readAnalyticsConsent();
-if (analyticsConfigured && consent === "granted") {
-  loadAnalytics();
-} else if (analyticsConfigured && consent !== "denied") {
-  showAnalyticsConsent();
-}
-
-document.querySelectorAll("[data-analytics-settings]").forEach((button) => {
-  button.addEventListener("click", () => {
-    denyAnalytics(true);
-  });
-});
+if (analyticsConfigured) loadAnalytics();
 
 document.addEventListener("closer:contact-prepared", (event) => {
   emitAnalytics("contact_prepare", {
@@ -515,17 +396,5 @@ document.addEventListener("click", (event) => {
     });
   } else if (link.href === "mailto:closer@closer.com.py") {
     emitAnalytics("email_click", { placement: analyticsPlacementFor(link) });
-  }
-});
-
-window.addEventListener("storage", (event) => {
-  if (event.key !== analyticsConsentKey) return;
-  analyticsConsentInMemory = null;
-  const nextConsent = readAnalyticsConsent();
-  if (nextConsent === "granted" && !analyticsEnabled) {
-    removeConsentBanner();
-    loadAnalytics();
-  } else if (nextConsent !== "granted") {
-    denyAnalytics(nextConsent === null, false);
   }
 });
