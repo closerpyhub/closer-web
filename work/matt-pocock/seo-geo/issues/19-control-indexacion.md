@@ -1,7 +1,7 @@
 # 19 · Verificar descubrimiento e indexación posteriores
 
 Status: needs-info
-Blocked by: acceso de lectura a Search Console y Bing para estado privado por URL; revisión D+7 pendiente
+Blocked by: revisión D+7 por URL pendiente
 
 ## Entrega
 
@@ -28,4 +28,4 @@ Un control correcto puede cerrar aunque un buscador tarde; la indexación no obs
 
 23/10/2026 · Control técnico de D0 completado para las ocho URLs nuevas: el sitemap público contiene las 28 URLs de la versión, `robots.txt` conserva la política fuente junto a la política administrada de Cloudflare y ambos dominios sirven el HTML marcado con el SHA `f1ea30c`. Las pruebas locales del mismo SHA validaron canonical, metadata, grafo JSON-LD y enlaces de las páginas. Esto prueba publicación y rastreabilidad técnica, no descubrimiento, rastreo ni indexación por buscadores.
 
-No hubo acceso de lectura a Search Console/Bing para obtener el estado, canonical elegido ni causas por URL; tampoco se solicitó indexación ni se cambió un envío externo. La disponibilidad se comprobó sin modificar cuentas: Search Console no expuso una propiedad y Bing Webmaster pidió iniciar sesión. Próxima revisión D+7: 30/10/2026, con lectura autorizada de ambas propiedades si está disponible.
+24/10/2026 · Ya hay lectura autorizada en ambas propiedades. Search Console aún sólo expone el agregado de 3 páginas indexadas y 18 no indexadas; Bing confirma el sitemap importado sin errores, con 28 URLs descubiertas, pero indica que sus informes siguen procesándose. No se solicitó indexación ni se cambió un envío externo. La revisión D+7 por URL permanece el 30/10/2026: distinguirá descubierta, rastreada e indexada con la fuente y fecha de cada URL prioritaria.

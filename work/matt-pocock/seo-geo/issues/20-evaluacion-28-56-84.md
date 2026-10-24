@@ -1,7 +1,7 @@
 # 20 · Evaluar resultados y decidir el siguiente trabajo
 
 Status: needs-info
-Blocked by: 02, 04; ventanas futuras y datos comparables aún no disponibles
+Blocked by: 02; ventanas futuras y datos comparables aún no disponibles
 
 ## Entrega
 
@@ -28,7 +28,7 @@ Tres cortes comparables y una recomendación sustentada para continuar el crecim
 
 | Corte | Estado inicial | Evidencia | Próximo paso |
 | --- | --- | --- | --- |
-| D+28 · 20/11/2026 | Pendiente | D0 técnico publicado el 23/10; faltan base de buscadores, GA4/consentimiento y ventana transcurrida | Obtener primer período comparable |
+| D+28 · 20/11/2026 | Pendiente | D0 técnico publicado el 23/10; GA4 con consentimiento ya recibe datos y Search Console/Bing tienen señales iniciales, pero falta la ventana transcurrida y comparable | Obtener primer período comparable |
 | D+56 · 18/12/2026 | Pendiente | Pendiente | Obtener segundo período comparable |
 | D+84 · 15/01/2027 | Pendiente | Pendiente | Cerrar evaluación |
 

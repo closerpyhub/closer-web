@@ -1,7 +1,7 @@
 # 02 · Obtener línea base SEO, demanda y GEO
 
 Status: needs-info
-Blocked by: acceso de lectura a Search Console/Bing/Cloudflare para métricas privadas
+Blocked by: ventanas comparables de 28+28 días y datos GEO aún en procesamiento
 
 ## Entrega
 
@@ -32,3 +32,5 @@ Un acceso ausente deja este ticket needs-info; no bloquea 03/05 ni la preparaci�
 23/10/2026 · Comprobación de disponibilidad, sin cambios externos: la sesión abierta de Search Console mostró la pantalla de bienvenida con “Añadir sitio web”, sin una propiedad disponible para leer. Bing Webmaster mostró “Sign In”; no se intentó autenticar. La integración de Cloudflare confirmó zona y despliegue, pero una consulta de analítica de zona de solo lectura fue rechazada por falta del permiso específico de analítica. No se añadió ningún sitio, no se inició sesión, no se solicitó indexación y no se guardaron métricas. Siguen faltando fuentes comparables de 28+28 días.
 
 23/10/2026 · La sesión autorizada de Search Console mostró la propiedad `https://closer.com.py/`: resumen de 14 clics de búsqueda, 3 páginas indexadas y 18 sin indexar; HTTPS y breadcrumbs sin errores mostrados. Son señales iniciales de la interfaz, no una línea base comparable de 28+28 días. Bing Webmaster importó esa misma propiedad y su sitemap desde Search Console; todavía no hay una ventana de rendimiento o cobertura suficiente para analizar. Mantener el ticket abierto hasta obtener las dos ventanas y sus filtros.
+
+24/10/2026 · Con acceso de lectura a la propiedad correcta, Search Console mostró 15 clics de búsqueda web, 3 páginas indexadas y 18 sin indexar; HTTPS: 10 válidas, 0 no válidas; breadcrumbs: 9 válidas, 0 no válidas; Core Web Vitals todavía sin datos de campo. Bing Webmaster confirmó `https://closer.com.py/sitemap.xml` importado y correcto el 23/10, sin errores ni advertencias, con 28 URLs descubiertas. Bing aún informa procesamiento de sus datos y su panel AI Performance no tiene citas para los últimos tres meses. Estos son puntos iniciales observados, no sustituyen dos ventanas comparables ni permiten inferir demanda, posiciones o resultados GEO.
