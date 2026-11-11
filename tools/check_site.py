@@ -18,6 +18,7 @@ from xml.etree import ElementTree
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://closer.com.py"
 REQUIRED_ROUTES = {
+    "tu-negocio-en-chatgpt.html",
     "index.html", "index-opcion-servicios-clara.html", "contacto.html",
     "gestion-redes.html", "meta-ads.html", "chatbots-ia.html", "paginas-web.html",
     "apps-sistemas.html", "campanias-creativas.html", "google-ads.html",
@@ -39,6 +40,7 @@ NOINDEX_ROUTES = {
     "plan-chatbots-optimizacion.html", "plan-chatbots-robot-avanzado.html",
 }
 SERVICE_ROUTES = {
+    "tu-negocio-en-chatgpt.html",
     "gestion-redes.html", "meta-ads.html", "chatbots-ia.html", "paginas-web.html",
     "apps-sistemas.html", "campanias-creativas.html", "google-ads.html", "automatizaciones-bi.html",
     "plan-redes-presencia.html", "plan-redes-impulso.html", "plan-redes-dominio.html",
